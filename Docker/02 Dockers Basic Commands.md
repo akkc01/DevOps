@@ -1,6 +1,6 @@
 # Dockers Basic Commands--
 ---
-### Container Interaction Commands-
+## Container Interaction Commands-
 - `Interactin`with containers:-
 ```powershell
 docker start container	                                      # Starts a new container
@@ -17,6 +17,8 @@ docker logs -ft container	Follows container logs
 docker exec -ti container script.sh	Runs a command in a container
 docker commit container image	Creates a new image from a container
 docker create image	Creates a new container from an image
+
+```
 ## Registry Commands:-
 - Commands:-
 ```powershell
@@ -42,7 +44,7 @@ docker stats container      # Shows container resource usage statistics
 
 ## Build Commands--
 - Commands-
-  ```powershell
+```powershell
 docker build	                                                        # Builds an image from a Dockerfile in the current directory
 docker build https://github.com/docker/rootfs.git#container:docker  	# Builds an image from a remote GIT repository
 docker build -t imagename/tag	                                        # Builds and tags an image for easier tracking
