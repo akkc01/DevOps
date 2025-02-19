@@ -35,6 +35,15 @@ docker commit container image
 ```powershell
 docker create image	
 ```
+## Registry Commands:-
+- Commands:-
+```powershell
+docker image ls	             # Lists images
+docker image rm mysql	       # Removes an image
+docker tag image tag	       # Tags an image
+docker history image	       # Displays the image history
+docker inspect image	       # Displays low-level information about an image
+```
 
 ## Container Inspection Commands--
 - Commands:-
@@ -48,146 +57,77 @@ docker logs container       # Gathers the logs for a container
 docker stats container      # Shows container resource usage statistics
 ```
 
+## Build Commands--
+- Commands-
+  ```powershell
+docker build	                                                        # Builds an image from a Dockerfile in the current directory
+docker build https://github.com/docker/rootfs.git#container:docker  	# Builds an image from a remote GIT repository
+docker build -t imagename/tag	                                        # Builds and tags an image for easier tracking
+docker build https://yourserver/file.tar.gz	                          # Builds an image from a remote tar archive
+docker build -t image:1.0-<<EOFFROM busyboxRUN echo “hello world”EOF	# Builds an image via a Dockerfile that is passed through STDIN
+```
 
-Docker Architecture
-Docker Commands Cheat Sheet
-Build Commands
-Clean Up Commands
-Container Interaction Commands
-Container Inspection Commands
-Manage Images Commands
-Run Commands
-Registry Commands
-Service Commands
-Network Commands
-Docker Architecture
-Docker architecture consists of five main components: server, client, container, image, and registry.
+## Clean Up Commands:-
+- Commands:-
+```powershell
+docker image prune	                                          # Clears an unused image
+docker image prune -a	                                        # Clears all images that are not being used by containers
+docker system prune	                      # Removes all stopped containers, networks not used, all dangling images, and all build cache
+docker image rm image	                                        # Removes an image
+docker rm container	                                          # Removes a running container
+docker swarm leave	                                          # Leaves a swarm
+docker stack rm stackname	                                    # Removes a swarm
+docker volume rm $(docker volume ls -f dangling=true -q)    	# Removes all dangling volumes
+docker rm $(docker ps -a -q)	                                # Removes all stopped containers
+docker kill $ (docker ps -q)	                                # Stops all running containers
 
-Docker Server
-
-A Docker server or Docker daemon is a program that runs in the background of your computer and manages Docker containers and images. When you use the Docker command line interface.
-
-(CLI) to create, run, or manage containers, you interact with the Docker daemon.
-
-The Docker daemon is an essential platform component that ensures containers can be started and stopped automatically when the system boots up.
-
-Docker Client
-
-The Docker client lets users interact with the Docker daemon with its command-line interface (CLI). In simple terms, it’s the main part of the Docker architecture for creating, managing, and running container applications.
-
-When you use the Docker CLI to pass a command, the Docker client sends the command to the Docker daemon running on your computer, which then carries out the requested operation. The Docker client can be installed on any machine that needs to interact with the Docker daemon, including your local machine, a remote server, or a virtual server.
-
-
-Docker Container
-
-A Docker container is a package that contains all the required prerequisites to run an application.
-
-Containers are designed to be highly portable, meaning that they can be easily moved from one environment to another, such as from a developer’s laptop to a testing environment or from a testing environment to a production environment.
-
-Docker Image
-
-A Docker image is a preconfigured template that specifies what should be included in a Docker container. Usually, images are downloaded from websites like Docker Hub. However, it’s also possible to create a custom image with the help of Dockerfile.
-
-Docker Registry
-
-The Docker registry is a central repository that stores and manages Docker images. It is a server-based system that lets users store and share Docker images with others, making it easy to distribute and deploy applications. The most notable Docker registry is Docker Hub.
-
-Docker Commands Cheat Sheet
-Now that you know how Docker functions, let’s look at some of the most popular Docker command examples.
-
-##Build Commands--
-docker build
-docker build https://github.com/docker/
-rootfs.git#container:docker
-docker build -t imagename/tag
-docker build https://yourserver/file.tar.gz
-docker build -t image:1.0
--<<EOFFROM busyboxRUN echo “hello world”EOF
-
-Builds an image from a Dockerfile in the current directory
-Builds an image from a remote GIT repository
-Builds and tags an image for easier tracking
-Builds an image from a remote tar archive
-Builds an image via a Dockerfile that is passed through STDIN
-
-
-## Clean Up Commands--
-docker image prune
-docker image prune -a
-docker system prune
-docker image rm image
-docker rm container
-docker swarm leave
-docker stack rm stackname
-
-Clears an unused image
-Clears all images that are not being used by containers
-Removes all stopped containers, all networks not used by containers, all dangling images, and all build cache
-Removes an image
-Removes a running container
-Leaves a swarm
-Removes a swarm
+```
 
 ##  Manage Images Commands--
-docker image ls
-docker image rm mysql
-docker tag image tag
-docker history image
-docker inspect image
+- Commands:-
+```powershell
+docker image ls	            # Lists images
+docker image rm mysql	      # Removes an image
+docker tag image tag	      # Tags an image
+docker history image	      # Displays the image history
+docker inspect image	      # Displays low-level information about an image
 
-Lists images
-Removes an image
-Tags an image
-Displays the image history
-Displays low-level information about an image
+```
 
 ## Run Commands--
-docker run (options) image (command) (arg...)
-
-Flag
---detach , -d
---env , -e
---hostname , -h
---label , -l
---name
-
-Explanation
-Runs a container in the background and prints the container ID
-Sets environment variables
-Sets a hostname to a container
-Creates a meta data label for a container
-Assigns a name to a container
-
+- Commands:- `docker run (options) image (command) (arg...)`--
+```powershell
+Flag                                  	Explanation
+--detach ,-d                  Runs a container in the background and prints the container ID
+--env , -e	                  Sets environment variables
+--hostname , -h	              Sets a hostname to a container
+--label , -l	                Creates a meta data label for a container
+--name	                      Assigns a name to a container
+--network	                    Connects a container to a network
+--rm	                        Removes container when it stops
+--read-only	                  Sets the container filesystem as read-only
+--workdir , -w	              Sets a working directory in a container
+```
 
 ## Service Commands--
-Command
-docker service ls
-docker stack services stackname
-docker service ps servicename
-docker service update servicename
-docker service create image
-
-Explanation
-Lists all services running in a swarm
-Lists all running services
-Lists the tasks of a service
-Updates a service
-Creates a new service
+- Commands:-
+```powershell
+docker service ls	                             # Lists all services running in a swarm
+docker stack                                   # services stackname	Lists all running services
+docker service ps servicename	                 # Lists the tasks of a service
+docker service update servicename              # Updates a service
+docker service create image	                   # Creates a new service
+docker service scale servicename=10	           # Scales one or more replicated services
+docker service logs stackname servicename	     # Lists all service logs
+```
 
 ## Network Commands--
-Command
-docker network create networkname
-docker network rm networkname
-docker network ls
-docker network connect networkname container
-docker network disconnect networkname container
-docker network inspect networkname
-
-Explanation
-Creates a new network
-Removes a specified network
-Lists all networks
-Connects a container to a network
-Disconnects a container from a network
-Displays detailed information about a network
-
+- Commands:-
+```powershell
+docker network                                       # create networkname	Creates a new network
+docker network rm networkname	                       # Removes a specified network
+docker network ls	                                   # Lists all networks
+docker network connect networkname container	       # Connects a container to a network
+docker network disconnect networkname container      # Disconnects a container from a network
+docker network inspect networkname	                 # Displays detailed information about a network
+```
