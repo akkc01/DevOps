@@ -4,7 +4,7 @@
 - `Interactin`with containers:-
 ```powershell
 docker start container	                                      # Starts a new container
-docker stop container	                                        # Stops a container
+docker stop container	                                      # Stops a container
 docker pause container	Pauses a container
 docker unpause container	Unpauses a container
 docker restart container	Restarts a container
