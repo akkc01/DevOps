@@ -37,6 +37,7 @@ docker top container        # Shows all running processes in an existing contain
 docker inspect container    # Displays low-level information about a container
 docker logs container       # Gathers the logs for a container
 docker stats container      # Shows container resource usage statistics
+
 ```
 
 ## Build Commands--
@@ -47,6 +48,7 @@ docker build https://github.com/docker/rootfs.git#container:docker  	# Builds an
 docker build -t imagename/tag	                                        # Builds and tags an image for easier tracking
 docker build https://yourserver/file.tar.gz	                          # Builds an image from a remote tar archive
 docker build -t image:1.0-<<EOFFROM busyboxRUN echo “hello world”EOF	# Builds an image via a Dockerfile that is passed through STDIN
+
 ```
 
 ## Clean Up Commands:-
@@ -95,7 +97,7 @@ Flag                                  	Explanation
 - Commands:-
 ```powershell
 docker service ls	                             # Lists all services running in a swarm
-docker stack                                   # services stackname	Lists all running services
+docker stack services stackname	               # Lists all running services
 docker service ps servicename	                 # Lists the tasks of a service
 docker service update servicename              # Updates a service
 docker service create image	                   # Creates a new service
@@ -106,7 +108,7 @@ docker service logs stackname servicename	     # Lists all service logs
 ## Network Commands--
 - Commands:-
 ```powershell
-docker network                                       # create networkname	Creates a new network
+docker network create networkname	                   # Creates a new network
 docker network rm networkname	                       # Removes a specified network
 docker network ls	                                   # Lists all networks
 docker network connect networkname container	       # Connects a container to a network
