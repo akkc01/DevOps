@@ -16,7 +16,7 @@ docker export container
 ```
 > **Note:** The `export` Exports container contents to a tar archive.
 
-- `Saves a running container as an image`:
+- `Saves a running container as an image`:-
 ```powershell
 docker commit -m “commit message” -a “author” container username/image_name: tag	
 ```
@@ -25,30 +25,28 @@ docker commit -m “commit message” -a “author” container username/image_n
 ```powershell
 docker logs -ft container
 ```
-- Runs a command in a container and Creates a new image from a container-
+- Runs a command in a container and Creates a new image from a container:-
   - container `logs`/-
 ```powershell
 docker exec -ti container script.sh
 docker commit container image	
 ```
-- Creates a new container from an image-
+- Creates a new container from an image:-
 ```powershell
-
-```
-
-
-
 docker create image	
 ```
+
 ##Container Inspection Commands--
-Commands-
-docker ps  
+- Commands:-
+```powershell
+docker ps   # list all running containers
 docker -ps -a
 docker diff container
 docker top container
 docker inspect container
 docker logs container
 docker stats container
+```
 
 Explanation-
 Lists all running containers
