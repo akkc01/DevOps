@@ -36,43 +36,18 @@ docker commit container image
 docker create image	
 ```
 
-##Container Inspection Commands--
+## Container Inspection Commands--
 - Commands:-
 ```powershell
-docker ps   # list all running containers
-docker -ps -a
-docker diff container
-docker top container
-docker inspect container
-docker logs container
-docker stats container
+docker ps                   # list all running containers
+docker -ps -a               # Lists all containers 
+docker diff container       # Inspects changes to directories and files in the container filesystem
+docker top container        # Shows all running processes in an existing container
+docker inspect container    # Displays low-level information about a container
+docker logs container       # Gathers the logs for a container
+docker stats container      # Shows container resource usage statistics
 ```
 
-Explanation-
-Lists all running containers
-Lists all containers
-Inspects changes to directories and files in the container filesystem
-Shows all running processes in an existing container
-Displays low-level information about a container
-Gathers the logs for a container
-Shows container resource usage statistics
-
-
-VPS
-Apr 11, 2024
-
-Ignas R.
-
-5min Read
-
-Docker Cheat Sheet: All the Most Essential Commands in One Place + Downloadable PDF
-Docker is a popular open-source platform that makes it easy to build, test, deploy, and manage containerized applications in a consistent, portable, or virtual environment such as VPS.
-
-While a powerful tool in your development arsenal, learning the different Docker commands can take time and effort. New users often benefit from having a Docker cheat sheet readily at hand.
-
-In this tutorial, we will explain how Docker works and provide the most common Docker commands, along with a downloadable cheat sheet for you to use.
-
-Download free docker cheat sheet
 
 Docker Architecture
 Docker Commands Cheat Sheet
