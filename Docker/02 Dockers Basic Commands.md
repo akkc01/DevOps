@@ -5,18 +5,18 @@
 ```powershell
 docker start container	                                      # Starts a new container
 docker stop container	                                      # Stops a container
-docker pause container	                                    # Pauses a container
-docker unpause container	Unpauses a container
-docker restart container	Restarts a container
-docker wait container	Blocks a container
-docker export container	Exports container contents to a tar archive
-docker attach container	Attaches to a running container
-docker wait container	Waits until the container is terminated and shows the exit code
-docker commit -m “commit message” -a “author” container username/image_name: tag	Saves a running container as an image
-docker logs -ft container	Follows container logs
-docker exec -ti container script.sh	Runs a command in a container
-docker commit container image	Creates a new image from a container
-docker create image	Creates a new container from an image
+docker pause container	                                      # Pauses a container
+docker unpause container	                                    # Unpauses a container
+docker restart container	                                    # Restarts a container
+docker wait container	                                        # Blocks a container
+docker export container	                                      # Exports container contents to a tar archive
+docker attach container	                                      # Attaches to a running container
+docker wait container	                                        # Waits until the container is terminated and shows the exit code
+docker commit -m “commit message” -a “author” container username/image_name: tag	# Saves a running container as an image
+docker logs -ft container	                                    # Follows container logs
+docker exec -ti container script.sh	                          # Runs a command in a container
+docker commit container image	                                # Creates a new image from a container
+docker create image	                                          # Creates a new container from an image
 
 ```
 ## Registry Commands:-
