@@ -2,7 +2,7 @@
 ```powershell
 $PSVersionTable.PSVersion
 ```
-### AzureRM PowerShell module installation--
+### Install Azure PowerShell module on windows for PowerShell 7--
 ```powershell
 Get-Module -Name AzureRM -ListAvailable
 Get-ExecutionPolicy -List
@@ -15,7 +15,7 @@ Update-Module -Name Az -Force
 Connect-AzAccount
 ```
 
-### AzureRM PowerShell module installation for Windows PowerShell--
+### Install Azure PowerShell module on windows for Windows PowerShell--
 ```powershell
 Install-Module -Name PowerShellGet -Force
 Get-ExecutionPolicy -List
