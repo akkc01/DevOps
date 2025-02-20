@@ -1,4 +1,4 @@
-## create VM, VNET,SUBNET,  NSG --
+## Create vm, vnet, subnet, nsg--
 
 ### Create a resorce group--
 ```powershell
