@@ -6,7 +6,7 @@ resource "azurerm_resource_group" "example" {
   location = "centralindia"
 }
 ```
-### Create a Virtual Network-
+### Create a Virtual Network(VNET)-
 ```powershell
 resource "azurerm_virtual_network" "example" {
   name                = "my_network"
@@ -15,7 +15,7 @@ resource "azurerm_virtual_network" "example" {
   resource_group_name = azurerm_resource_group.example.name
 }
 ```
-### Create A VNET-
+### Create A Subnet-
 ```powershell
 resource "azurerm_subnet" "example" {
   name                 = "subnet1"
