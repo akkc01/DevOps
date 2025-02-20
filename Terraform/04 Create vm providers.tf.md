@@ -1,4 +1,5 @@
-# 1. Specify the version of the AzureRM Provider to use
+# 1. Specify the version of the AzureRM Provider to use-
+```powershell
 terraform {
   required_providers {
     azurerm = {
@@ -7,9 +8,9 @@ terraform {
     }
   }
 }
-
+```
 # 2. Configure the AzureRM Provider
-
+```powershell
 provider "azurerm" {
   # The AzureRM Provider supports authenticating using via the Azure CLI, a Managed Identity
   # and a Service Principal. More information on the authentication methods supported by
@@ -23,4 +24,4 @@ provider "azurerm" {
   subscription_id = "f85ee25f-ffbe-4145-896a-4a245999982e"
   tenant_id       = "16b80534-097c-4b5a-9fab-f7cb31858160"
 }
-
+```
