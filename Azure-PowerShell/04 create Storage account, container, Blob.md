@@ -23,6 +23,8 @@ New-AzStorageAccount -ResourceGroupName MyResourceGroup -Name mystorageaccount -
 ```powershell
 New-AzStorageAccount -ResourceGroupName MyResourceGroup -Name mystorageaccount -Location westus -SkuName Standard_GRS -Kind StorageV2 -AssignIdentity
 ```
+
+
 ---
 ## Create Storage Account using Variable--
 ### Set variables-
