@@ -1,34 +1,40 @@
 ## Create RG, VNET, SUBNET, NSG, Public IP, Network Interface---
-
+### Create a RG-
+```powershell
 resource "azurerm_resource_group" "example" {
   name     = "my_rg_01"
   location = "centralindia"
 }
-
+```
+### Create a Virtual Network-
+```powershell
 resource "azurerm_virtual_network" "example" {
   name                = "my_network"
   address_space       = ["192.168.2.0/24"]
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
 }
-
+```
+### Create A VNET-
+```powershell
 resource "azurerm_subnet" "example" {
   name                 = "subnet1"
   resource_group_name  = azurerm_resource_group.example.name
   virtual_network_name = azurerm_virtual_network.example.name
   address_prefixes     = ["192.168.2.0/25"]
 }
-
-
-
+```
+### Create a Public IP-
+```powershell
 resource "azurerm_public_ip" "example" {
   name                = "my_vm_01_PublicIp1"
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
   allocation_method   = "Static"
-
   }
-
+```
+### Network Security Group-
+```powershell
 resource "azurerm_network_security_group" "example" {
   name                = "my_nsg"
   location            = azurerm_resource_group.example.location
@@ -46,6 +52,9 @@ resource "azurerm_network_security_group" "example" {
     destination_address_prefix = "*"
   }
 }
+```
+### Create a Network interface-
+```powershell
 
 resource "azurerm_network_interface" "example" {
   name                = "my_vm-nic1"
@@ -59,13 +68,17 @@ resource "azurerm_network_interface" "example" {
     public_ip_address_id = azurerm_public_ip.example.id
   }
 }
+```
 
+### Network Security Group Association-
+```powershell
 resource "azurerm_network_interface_security_group_association" "example" {
   network_interface_id      = azurerm_network_interface.example.id
   network_security_group_id = azurerm_network_security_group.example.id
 }
-
-
+```
+### Create a Virtual Machine-
+```powershell
 resource "azurerm_virtual_machine" "example" {
   name                  = "my_ubuntu_vm"
   location              = azurerm_resource_group.example.location
@@ -73,10 +86,7 @@ resource "azurerm_virtual_machine" "example" {
   network_interface_ids = [azurerm_network_interface.example.id]
   vm_size               = "Standard_DS1_v2"
 
-  # Uncomment this line to delete the OS disk automatically when deleting the VM
    delete_os_disk_on_termination = true
-
-  # Uncomment this line to delete the data disks automatically when deleting the VM
    delete_data_disks_on_termination = true
 
   storage_image_reference {
@@ -101,6 +111,8 @@ resource "azurerm_virtual_machine" "example" {
   }
 }
 
+## Take Public IP as Output-
+```powershell
 data "azurerm_public_ip" "example" {
   name                = azurerm_public_ip.example.name
   resource_group_name = azurerm_virtual_machine.example.resource_group_name
@@ -109,3 +121,4 @@ data "azurerm_public_ip" "example" {
 output "public_ip_address" {
   value = data.azurerm_public_ip.example.ip_address
 }
+```
