@@ -28,10 +28,11 @@ https://www.postman.com/downloads/
 
 2- `Authorization` tab settings-
 ```powershell
-Type ---Bearer Token | <Token>
+auth Type -Bearer Token | <Token>
 
 ```
-
+- then paste Beare token in token field.
+- 
 3- `Headers` tab settings-
 ```poweershell
     key             Value
