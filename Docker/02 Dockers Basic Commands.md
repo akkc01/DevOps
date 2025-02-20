@@ -1,13 +1,13 @@
 # Dockers Basic Commands--
 ---
 
-## After Installation of Docker Check Version-
+## Check Docker Version-
 - Description: Displays the version of Docker installed on your machine.
 ```powershell
 Docker --version
 ```
 
-## docker pull-
+## Pull Commands-
 - Description: Downloads a Docker image from a registry (such as Docker Hub).
 ```powershell
 docker pull <image-name>:<tag>
@@ -17,6 +17,24 @@ docker pull <image-name>:<tag>
 docker pull ubuntu:latest
 ```
 
+## Run Commands-
+- Commands:- `docker run (options) image (command) (arg...)`--
+```powershell
+Flag                                  	Explanation
+--detach ,-d                  Runs a container in the background and prints the container ID
+--env , -e	                  Sets environment variables
+--hostname , -h	              Sets a hostname to a container
+--label , -l	                Creates a meta data label for a container
+--name	                      Assigns a name to a container
+--network	                    Connects a container to a network
+--rm	                        Removes container when it stops
+--read-only	                  Sets the container filesystem as read-only
+--workdir , -w	              Sets a working directory in a container
+```
+example-
+```powershell
+docker run -d -p 80:80 nginx
+```
 
 ## Container Interaction Commands-
 - `Interactin`with containers:-
@@ -98,20 +116,6 @@ docker inspect image	      # Displays low-level information about an image
 
 ```
 
-## Run Commands--
-- Commands:- `docker run (options) image (command) (arg...)`--
-```powershell
-Flag                                  	Explanation
---detach ,-d                  Runs a container in the background and prints the container ID
---env , -e	                  Sets environment variables
---hostname , -h	              Sets a hostname to a container
---label , -l	                Creates a meta data label for a container
---name	                      Assigns a name to a container
---network	                    Connects a container to a network
---rm	                        Removes container when it stops
---read-only	                  Sets the container filesystem as read-only
---workdir , -w	              Sets a working directory in a container
-```
 
 ## Service Commands--
 - Commands:-
