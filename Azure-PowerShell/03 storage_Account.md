@@ -4,6 +4,12 @@
 Connect-AzAccount
 ```
 ---
+
+### Create a Resource Group-
+```powershell
+New-AzResourceGroup -Name myrg -Location westus
+```
+- you can use -n , -l for name and location fields.
 ### Create AZ Storage Account--
 To Create Azure Storage Account run the below code in PowerShell:
 ```powershell
