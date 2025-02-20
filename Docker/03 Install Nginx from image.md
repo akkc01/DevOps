@@ -1,20 +1,20 @@
 ## Install the nginx using docker-
-- # need to search the image from dockr hub using-
+### Search the image from dockr hub using-
 - Docker search <image_name>
 ```powershell
 Docker search nginx
 ```
 -choose the 1s one nginx.
-- # Pull the Image from docker hub to local PC using-
+### Pull the Image from docker hub to local PC using-
 - Docker pull <image_name>.
 ```powershell
 Docker pull nginx
 ```
-- # Run the nginx-
+### Run the nginx-
 ```powershell
  docker run -d nginx
 ```
-- # Rename the name of instance-
+### Rename the name of instance-
 - replace the name akkc as your need.
 ```powershell
 docker run -d --name akkc nginx
