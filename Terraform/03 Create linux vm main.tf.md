@@ -1,4 +1,5 @@
-
+## Create Linux VM-
+```powershell
 resource "azurerm_resource_group" "rg" {
   name     = "my_rg"
   location = "eastus"
@@ -17,8 +18,6 @@ resource "azurerm_subnet" "subnet" {
   virtual_network_name = azurerm_virtual_network.vnet.name
   address_prefixes     = ["192.168.1.0/25"]
 }
-
-
 
 resource "azurerm_public_ip" "publicip" {
   name                = "my_vm_PublicIp"
@@ -100,6 +99,9 @@ resource "azurerm_virtual_machine" "vm" {
   }
 }
 
+```
+### Output Public IP-
+```powershell
 data "azurerm_public_ip" "vm_pip" {
   name                = azurerm_public_ip.publicip.name
   resource_group_name = azurerm_virtual_machine.vm.resource_group_name
@@ -108,3 +110,4 @@ data "azurerm_public_ip" "vm_pip" {
 output "public_ip_address" {
   value = data.azurerm_public_ip.vm_pip.ip_address
 }
+```
