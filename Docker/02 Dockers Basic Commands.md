@@ -2,6 +2,7 @@
 ---
 
 ## After Installation of Docker Check Version-
+- `Description:` Displays the version of Docker installed on your machine.
 ```powershell
 Docker --version
 ```
