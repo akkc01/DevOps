@@ -23,9 +23,9 @@ https://www.postman.com/downloads/
 ### Now Open Postman-
 - USE the below `url` in postman Address bar. choose the `PUT` method from options-
 `https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{storageAccountName}?api-version=2021-04-01`
-- you have to change your Subscription ID, choose your Resource Group in hich Storage account will be created and give your storage account a name.
-- `Which will be look like`-
+- you have to change your Subscription ID, choose your Resource Group in hich Storage account will be created and give your storage account a name. like-
 - `https://management.azure.com/subscriptions/f85ee25f-ffbe-4145-896a-4a245999982e/resourceGroups/AKKC_API?api-version=2021-04-01`
+  
 ## Now do following setting in your postman-
 1- `Params` tab settings-
 - api-version       2024-11-01 
