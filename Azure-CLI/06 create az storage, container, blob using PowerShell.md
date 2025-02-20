@@ -1,4 +1,4 @@
-# Create AZ Storage Account, Container And Blob using Variables--
+### Create AZ Storage Account, Container And Blob using Variables--
 1. -
 ```powershell
 $rg_name ="AKKC_B17_G22"
