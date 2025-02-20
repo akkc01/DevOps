@@ -59,7 +59,7 @@ New-AzVm -ResourceGroupName 'myResourceGroup' -Name 'myVM' -Location 'eastus' -I
 ```powershell
 New-AzVm -ResourceGroupName 'devops-az-powershell' -Name 'WS2022' -Location 'centralindia' -Image 'MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition:latest' -VirtualNetworkName 'vnet1' -SubnetName 'subnet1' -SecurityGroupName 'devops-nsg' -PublicIpAddressName 'ws2022ip' -OpenPorts 80,3389
 ```
-### Connect to the VM-
+### Get Public IP of the VM-
 ```powershell
 $publicIpAddress = (Get-AzPublicIpAddress -ResourceGroupName 'devops-az-powershell' -Name "ws2022ip").IpAddress
 ```
@@ -69,53 +69,66 @@ mstsc /v:$publicIpAddress
 ```
 
 ****************************************************************************************************************************
-# Create a windows server 2022 VM--
---------------------------------------------------------------------------------------------------------------------------------
-### Define Variables
-- $resourceGroup = "bbpl"
-- $location = "centralindia"
-- $vmName = "vm1"
-- $vmSize = "Standard_D2s_v3"
-- $adminUsername = "akkc"
-- $adminPassword = "Surveillance1@123"
+## Create a windows server 2022 VM--
+---
+### Define Variables-
+```powershell
+$resourceGroup = "bbpl"
+$location = "centralindia"
+$vmName = "vm1"
+$vmSize = "Standard_D2s_v3"
+$adminUsername = "akkc"
+$adminPassword = "Surveillance1@123"
 
 ### Log in to Azure
-- Connect-AzAccount
-
-### Set the Subscription
-- Set-AzContext -SubscriptionId "your-subscription-id"
-
-### Create a Resource Group
-- New-AzResourceGroup -Name $resourceGroup -Location $location
-
-### Create a Virtual Network and Subnet
-- $subnetConfig = New-AzVirtualNetworkSubnetConfig -Name "subnet1" -AddressPrefix "10.0.0.0/24"
-- $vnet = New-AzVirtualNetwork -ResourceGroupName $resourceGroup -Location $location -Name "vnet1" -AddressPrefix "10.0.0.0/16" -Subnet $subnetConfig
-
+```powershell
+Connect-AzAccount
+```
+### Set the Subscription-
+```powershell
+Set-AzContext -SubscriptionId "your-subscription-id"
+```
+### Create a Resource Group-
+```powershell
+New-AzResourceGroup -Name $resourceGroup -Location $location
+```
+### Create a Virtual Network and Subnet-
+```powershell
+$subnetConfig = New-AzVirtualNetworkSubnetConfig -Name "subnet1" -AddressPrefix "10.0.0.0/24"
+$vnet = New-AzVirtualNetwork -ResourceGroupName $resourceGroup -Location $location -Name "vnet1" -AddressPrefix "10.0.0.0/16" -Subnet $subnetConfig
+```
 ### Create a Public IP Address
-- $publicIp = New-AzPublicIpAddress -ResourceGroupName $resourceGroup -Location centralindia -Name "ws2022IP" -AllocationMethod static
-
+```powershell
+$publicIp = New-AzPublicIpAddress -ResourceGroupName $resourceGroup -Location centralindia -Name "ws2022IP" -AllocationMethod static
+```
 ### Create a Network Interface
-- $nic = New-AzNetworkInterface -ResourceGroupName $resourceGroup -Location $location -Name "MyNIC" -SubnetId $vnet.Subnets[0].Id -PublicIpAddressId $publicIp.Id
-
+```powershell
+$nic = New-AzNetworkInterface -ResourceGroupName $resourceGroup -Location $location -Name "MyNIC" -SubnetId $vnet.Subnets[0].Id -PublicIpAddressId $publicIp.Id
+```
 ### Create the Virtual Machine Configuration
-- $vmConfig = New-AzVMConfig -VMName WS2022 -VMSize $vmSize
-- $vmConfig = Set-AzVMOperatingSystem -VM $vmConfig -Windows -ComputerName $vmName -Credential (Get-Credential -UserName $adminUsername -Message "Enter the admin password") -ProvisionVMAgent -EnableAutoUpdate
-- $vmConfig = Set-AzVMSourceImage -VM $vmConfig -PublisherName "MicrosoftWindowsServer" -Offer "WindowsServer" -Skus "2022-Datacenter" -Version "latest"
-- $vmConfig = Add-AzVMNetworkInterface -VM $vmConfig -Id $nic.Id
-
+```powershell
+$vmConfig = New-AzVMConfig -VMName WS2022 -VMSize $vmSize
+$vmConfig = Set-AzVMOperatingSystem -VM $vmConfig -Windows -ComputerName $vmName -Credential (Get-Credential -UserName $adminUsername -Message "Enter the admin password") -ProvisionVMAgent -EnableAutoUpdate
+$vmConfig = Set-AzVMSourceImage -VM $vmConfig -PublisherName "MicrosoftWindowsServer" -Offer "WindowsServer" -Skus "2022-Datacenter" -Version "latest"
+$vmConfig = Add-AzVMNetworkInterface -VM $vmConfig -Id $nic.Id
+```
 ### Create the Virtual Machine
-- New-AzVM -ResourceGroupName $resourceGroup -Location $location -VM $vmConfig -OpenPorts 80,3389
-
+```powershell
+New-AzVM -ResourceGroupName $resourceGroup -Location $location -VM $vmConfig -OpenPorts 80,3389
+```
 ### Verify the VM Creation
-- Get-AzVM -ResourceGroupName $resourceGroup -Name $vmName
-
+```powershell
+Get-AzVM -ResourceGroupName $resourceGroup -Name $vmName
+```
 ### Connect to the VM
-- $publicIpAddress = (Get-AzPublicIpAddress -ResourceGroupName $resourceGroup -Name "ws2022IP").IpAddress
-- mstsc /v:$publicIpAddress
-***************************************************************************************************************************************
-***************************************************************************************************************************************
+```powershell
+$publicIpAddress = (Get-AzPublicIpAddress -ResourceGroupName $resourceGroup -Name "ws2022IP").IpAddress
+mstsc /v:$publicIpAddress
+```
+---
 
+
+```powershell
 ### Set the administrator and password for the VM
 $cred = Get-Credential
 
@@ -156,3 +169,4 @@ $vm = @{
 }
 New-AzVM @vm
 
+```
