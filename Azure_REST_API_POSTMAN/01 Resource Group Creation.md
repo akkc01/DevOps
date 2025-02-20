@@ -23,16 +23,13 @@ https://www.postman.com/downloads/
 - `https://management.azure.com/subscriptions/f85ee25f-ffbe-4145-896a-4a245999982e/resourceGroups/AKKC_API/providers/Microsoft.Storage/storageAccounts/akkcstorageacc?api-version=2021-04-01`
 ## Now do following setting in postman-
 1- `Params` tab settings-
-- api-version       2024-11-01
-- 
+- api-version       2024-11-01 
 
 2- `Authorization` tab settings-
 ```powershell
 auth Type -Bearer Token | <Token>
-
 ```
 - then paste Beare token in token field.
-- 
 3- `Headers` tab settings-
 ```poweershell
     key             Value
