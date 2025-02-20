@@ -51,13 +51,14 @@ New-AzStorageContainer -Name $container_name -Context $ctx -AllowBlobPublicAcces
 ```powershell
 - Set-AzStorageContainerAcl -Name "$container_name" -Context $ctx -PublicAccess Blob
 ```
-# Upload the blob
+### Upload the blobs to the container-
 ```powershell
 $storageAccount = Get-AzStorageAccount -ResourceGroupName $rg_name -Name $s_acc_name
 $a_ctx = $storageAccount.Context
 $filePath = "E:/wall/3.jpeg"
 Set-AzStorageBlobContent -File $filePath -Container $container_Name -Context $a_ctx
 ```
+
 ## Upload blobs to the container--
 ### upload a file to the default account (inferred) access tier
 ```powershell
