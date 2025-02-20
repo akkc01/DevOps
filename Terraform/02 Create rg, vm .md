@@ -110,6 +110,7 @@ resource "azurerm_virtual_machine" "example" {
     disable_password_authentication = false
   }
 }
+```
 
 ## Take Public IP as Output-
 ```powershell
