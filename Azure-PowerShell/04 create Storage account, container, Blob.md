@@ -88,7 +88,7 @@ Set-AzStorageBlobContent @Blob1HT
  Set-AzStorageBlobContent @Blob2HT
   ```
 
-### upload a file to a folder to the Archive access tier
+### 3- upload a file to a folder to the Archive access tier
 ```powershell
 $Blob3HT = @{
   File             = 'D:\Images\FolderName\Image003.jpg'
@@ -130,7 +130,7 @@ Get-AzStorageBlobContent @DLBlob2HT
 ```
 ---
 
-# note--
+# Notes--
 ```powershell
 $rg_name = "My_rg_akkc11"
 $location = "EastUS"
