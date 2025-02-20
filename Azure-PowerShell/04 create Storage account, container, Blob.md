@@ -1,4 +1,4 @@
-## 1 Create AZ Storage account, container and blob using PowerShell--
+## 1- Create AZ Storage account, container and blob using PowerShell--
 ### Sign in to Azure
 ```powershell
 Connect-AzAccount
