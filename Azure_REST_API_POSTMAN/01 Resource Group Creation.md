@@ -1,5 +1,4 @@
-# To Create Azure Storage Account using `REST-API` with `POSTMAN`-
-## Just Follw the below steps-
+## To Create Azure Storage Account using `REST-API` with `POSTMAN`-
 ### First we need to Login our Azure account using below command-
 ```powershell
 az login
