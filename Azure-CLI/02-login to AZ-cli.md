@@ -10,7 +10,7 @@ az login
 az account show -o table
 ```
 
-### Login in AZ account--
+### Logout in AZ account--
 ```powershell
 az logout
 ```
