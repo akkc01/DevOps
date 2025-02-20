@@ -1,4 +1,4 @@
-## 1- Create AZ Storage account, container and blob using PowerShell--
+## 1- Create AZ Storage account using PowerShell--
 ### Sign in to Azure
 ```powershell
 Connect-AzAccount
@@ -26,7 +26,7 @@ New-AzStorageAccount -ResourceGroupName MyResourceGroup -Name mystorageaccount -
 
 
 ---
-## Create Storage Account using Variable--
+## 2- Create Storage Account, container and blob using PowerShell Variables-
 ### Set variables-
 ```powershell
 $rg_name = "My_rg_akkc"
