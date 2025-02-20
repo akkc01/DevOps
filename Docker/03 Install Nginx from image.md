@@ -14,7 +14,7 @@ Docker pull nginx
 ```powershell
  docker run -d nginx
 ```
-### Rename the name of instance-
+### Rename the name of nginx instance-
 - replace the name akkc as your need.
 ```powershell
 docker run -d --name akkc nginx
