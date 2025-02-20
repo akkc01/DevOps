@@ -7,6 +7,17 @@
 Docker --version
 ```
 
+## docker pull-
+- Description: Downloads a Docker image from a registry (such as Docker Hub).
+  ```powershell
+docker pull <image-name>:<tag>
+  ```
+- Example-
+ ```powershell
+docker pull ubuntu:latest
+```
+
+
 ## Container Interaction Commands-
 - `Interactin`with containers:-
 ```powershell
