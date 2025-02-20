@@ -1,5 +1,11 @@
 # Dockers Basic Commands--
 ---
+
+## After Installation of Docker Check Version-
+```powershell
+Docker --version
+```
+
 ## Container Interaction Commands-
 - `Interactin`with containers:-
 ```powershell
