@@ -1,21 +1,27 @@
-#### Create Resource Group--
-----------------------------
-- New-AzResourceGroup -Name 'myResourceGroup' -Location 'eastus'
-- **Example-** New-AzResourceGroup -Name 'devops-az-powershell' -Location 'centralindia'
-
+### Sign in to Azure Account-
+```powershell
+Connect-AzAccount
+```
+### Create Resource Group--
+```powershell
+New-AzResourceGroup -Name 'myResourceGroup' -Location 'eastus'
+```
+- Example-
+```powershell
+New-AzResourceGroup -Name 'devops-az-powershell' -Location 'centralindia'
+```
   
-#### Create a Resource Group--
-------------------------------
+#### Create Resource Group using Variables--
+```powershell
 $rg = @{
     Name = 'az-powershell'
     Location = 'centralindia'
 }
 New-AzResourceGroup @rg
-
-
+```
 
 ### Create a VNET--
----------------------
+```powershell
 $vnet = @{
     Name = 'vnet1'
     ResourceGroupName = 'devops-az-powershell'
@@ -23,39 +29,46 @@ $vnet = @{
     AddressPrefix = '192.168.0.0/24'
 }
 $virtualNetwork = New-AzVirtualNetwork @vnet
-
-
+```
 
 ### Create a subnet within same vnet---
----------------------------------------
+```powershell
 $subnet = @{
     Name = 'subnet1'
     VirtualNetwork = $virtualNetwork
     AddressPrefix = '192.168.0.0/25'
 }
 $subnetConfig = Add-AzVirtualNetworkSubnetConfig @subnet
-
-
-                                  OR
-- $vnet = Get-AzVirtualNetwork -Name vnet2 -ResourceGroupName dev-test
+```
+- OR
+```powershell
+$vnet = Get-AzVirtualNetwork -Name vnet2 -ResourceGroupName dev-test
 Add-AzVirtualNetworkSubnetConfig -Name subnet2 -VirtualNetwork $vnet -AddressPrefix 192.168.4.0/25
+```
 
 ### Delete Resource Group--
-
+```powershell
 Remove-AzResourceGroup -Name 'test-rg' -Force
+```
 
 ### Create A VM--
-- New-AzVm -ResourceGroupName 'myResourceGroup' -Name 'myVM' -Location 'eastus' -Image 'MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition:latest' -VirtualNetworkName 'myVnet' -SubnetName 'mySubnet' -SecurityGroupName 'myNetworkSecurityGroup' -PublicIpAddressName 'myPublicIpAddress' -OpenPorts 80,3389
-
+```powershell
+New-AzVm -ResourceGroupName 'myResourceGroup' -Name 'myVM' -Location 'eastus' -Image 'MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition:latest' -VirtualNetworkName 'myVnet' -SubnetName 'mySubnet' -SecurityGroupName 'myNetworkSecurityGroup' -PublicIpAddressName 'myPublicIpAddress' -OpenPorts 80,3389
+```
 - **example**
-- New-AzVm -ResourceGroupName 'devops-az-powershell' -Name 'WS2022' -Location 'centralindia' -Image 'MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition:latest' -VirtualNetworkName 'vnet1' -SubnetName 'subnet1' -SecurityGroupName 'devops-nsg' -PublicIpAddressName 'ws2022ip' -OpenPorts 80,3389
+```powershell
+New-AzVm -ResourceGroupName 'devops-az-powershell' -Name 'WS2022' -Location 'centralindia' -Image 'MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition:latest' -VirtualNetworkName 'vnet1' -SubnetName 'subnet1' -SecurityGroupName 'devops-nsg' -PublicIpAddressName 'ws2022ip' -OpenPorts 80,3389
+```
+### Connect to the VM-
+```powershell
+$publicIpAddress = (Get-AzPublicIpAddress -ResourceGroupName 'devops-az-powershell' -Name "ws2022ip").IpAddress
+```
+### Take VM on Remote- 
+```powershell
+mstsc /v:$publicIpAddress
+```
 
-### Connect to the VM
-- $publicIpAddress = (Get-AzPublicIpAddress -ResourceGroupName 'devops-az-powershell' -Name "ws2022ip").IpAddress
-- mstsc /v:$publicIpAddress
-
-
-***************************************************************************************************************************************
+****************************************************************************************************************************
 # Create a windows server 2022 VM--
 --------------------------------------------------------------------------------------------------------------------------------
 ### Define Variables
