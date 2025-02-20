@@ -155,7 +155,7 @@ Remove-AzResourceGroup -Name $ResourceGroup
 
 
 # note--
-
+```powershell
 $rg_name = "My_rg_akkc11"
 $location = "EastUS"
 $s_acc_name = "mystorageaccountakkc11"
@@ -170,13 +170,10 @@ $a_ctx = $storageAccount.Context
 $filePath = "E:/wall/3.jpeg"
 Set-AzStorageBlobContent -File $filePath -Container $container_Name -Context $a_ctx
 
+```
+---
 
-
-
-
-
-
-
+```powershell
 
 $rg_name = "AKKC_RG"
 $location = "EastUS"
@@ -193,3 +190,4 @@ Get-AzStorageContainerAcl -Container $container_name -Context $s_ctx
 $filePath = "E:/wall/3.jpeg"
 Set-AzStorageBlobContent -File $filePath -Container $container_Name -Context $s_ctx
 Get-AzStorageContainer -Context $ctx | Select Name, PublicAccess
+```
