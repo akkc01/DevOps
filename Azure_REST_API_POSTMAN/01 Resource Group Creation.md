@@ -18,11 +18,13 @@ az account get-access-token --query accessToken --output tsv
 ```powershell
 https://www.postman.com/downloads/
 ```
-### 
-
-### `Params` tab settings-
+### Now Open Postman-
+- copy& paste below `url` in postman Address bar. choose the `PUT` method from options-
+- `https://management.azure.com/subscriptions/f85ee25f-ffbe-4145-896a-4a245999982e/resourceGroups/AKKC_API/providers/Microsoft.Storage/storageAccounts/akkcstorageacc?api-version=2021-04-01`
+## Now do following setting in postman-
+1- `Params` tab settings-
 - api-version       2024-11-01
-- https://management.azure.com/subscriptions/f85ee25f-ffbe-4145-896a-4a245999982e/resourceGroups/AKKC_API/providers/Microsoft.Storage/storageAccounts/akkcstorageacc?api-version=2021-04-01
+- 
 
 ### `Authorization` tab settings-
 ```powershell
