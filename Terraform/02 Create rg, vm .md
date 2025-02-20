@@ -113,6 +113,7 @@ resource "azurerm_virtual_machine" "example" {
 
 ## Take Public IP as Output-
 ```powershell
+
 data "azurerm_public_ip" "example" {
   name                = azurerm_public_ip.example.name
   resource_group_name = azurerm_virtual_machine.example.resource_group_name
@@ -121,4 +122,5 @@ data "azurerm_public_ip" "example" {
 output "public_ip_address" {
   value = data.azurerm_public_ip.example.ip_address
 }
+
 ```
