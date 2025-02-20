@@ -1,4 +1,4 @@
-# Dockers Basic Commands--
+# Dockers Commands--
 ---
 
 ## Check Docker Version-
@@ -129,7 +129,7 @@ docker service scale servicename=10	           # Scales one or more replicated s
 docker service logs stackname servicename	     # Lists all service logs
 ```
 
-## Network Commands--
+## Network Commands-
 - Commands:-
 ```powershell
 docker network create networkname	                   # Creates a new network
@@ -139,3 +139,44 @@ docker network connect networkname container	       # Connects a container to a 
 docker network disconnect networkname container      # Disconnects a container from a network
 docker network inspect networkname	                 # Displays detailed information about a network
 ```
+## docker volume-
+- Description: Manages Docker volumes.
+- Common commands:
+  ```powershell
+docker volume ls: List all volumes.
+docker volume create <volume-name>: Create a new volume.
+docker volume inspect <volume-name>: View details of a volume.
+docker volume rm <volume-name>: Remove a volume.
+```
+
+## Compose Command-
+- Description: Manages multi-container Docker applications using a docker-compose.yml file.
+-Common commands:
+```powershell
+docker-compose up: Starts the application and services defined in docker-compose.yml.
+docker-compose down: Stops and removes the containers defined in docker-compose.yml.
+docker-compose build: Builds the services defined in docker-compose.yml.
+docker-compose logs: Fetches logs for the services in docker-compose.yml.
+```
+
+## Tag Command-
+- Description: Tags an image with a new name or version.
+- Usage:
+  ```powershell
+docker tag <source-image>:<source-tag> <target-image>:<target-tag>
+```
+Example-
+```powershell
+docker tag myapp:1.0 myapp:v2
+```
+## save Command-
+- Description: Saves a Docker image to a tarball archive.
+- Usage:
+```powershell
+docker save -o <output-file.tar> <image-name>:<tag>
+```
+-Example:-
+```powershell
+docker save -o myapp.tar myapp:1.0
+```
+
