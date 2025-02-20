@@ -58,7 +58,7 @@ $a_ctx = $storageAccount.Context
 $filePath = "E:/wall/3.jpeg"
 Set-AzStorageBlobContent -File $filePath -Container $container_Name -Context $a_ctx
 ```
-## Clean up resources--
+### Delete/Clean up resources--
 ```powershell
 Remove-AzResourceGroup -Name $ResourceGroup
 ```
