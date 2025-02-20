@@ -18,7 +18,21 @@ docker pull ubuntu:latest
 ```
 
 ## Run Commands-
-- Commands:- `docker run (options) image (command) (arg...)`--
+- Basic Syntax:
+```powershell
+docker run [OPTIONS] IMAGE [COMMAND] [ARGUMENTS...]
+```
+- IMAGE: The name of the Docker image you want to run.
+- COMMAND (optional): The command you want to run inside the container.
+- ARGUMENTS (optional): Arguments to pass to the command.
+### Key Options and Flags for docker run:
+- `-d, --detach`
+- Description: Runs the container in detached mode (in the background), so it doesn’t block your terminal.
+```powershell
+docker run -d <image-name>
+docker run -d nginx
+```
+
 ```powershell
 Flag                                  	Explanation
 --detach ,-d                  Runs a container in the background and prints the container ID
