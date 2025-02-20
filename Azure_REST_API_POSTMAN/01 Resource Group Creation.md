@@ -1,4 +1,4 @@
-## Use the below steps-
+## To Create Azure Storage Account using `REST-API` with `POSTMAN`-
 
 ### Azure Login-
 ```powershell
