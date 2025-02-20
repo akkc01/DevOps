@@ -36,7 +36,8 @@ az storage blob list --account-name storageb17g2akkc11 --container-name akkc -o 
 ```
 ### Blob Delete--
 ```powershell
-az storage blob delete --account-name storageb17g2akkc11 --container-name akkc --name rdj.jpg
+az storage blob list --account-name $saccount_name --container-name $name -o table
+az storage blob delete --account-name $saccount_name --container-name $name --name rdj.jpg
 ```
 
 ### Check the anonymous access setting for a set of containers--
