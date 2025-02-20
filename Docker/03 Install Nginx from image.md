@@ -1,5 +1,4 @@
-## There are Many way to install nginx in docker-
-### Way-1-
+## Install the nginx using docker-
 - # need to search the image from dockr hub using-
 - Docker search <image_name>
 ```powershell
