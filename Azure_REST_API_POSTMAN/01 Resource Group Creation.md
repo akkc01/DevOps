@@ -15,7 +15,7 @@ az account list --output table
 az account get-access-token --query accessToken --output tsv
 ```
 Save this token somewhere for further use.
-## Now Download Postman-
+## Download Postman-
 - Download `Postman` from below link - 
 ```powershell
 https://www.postman.com/downloads/
