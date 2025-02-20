@@ -30,7 +30,6 @@ az storage account keys list --account-name $saccount_name --resource-group $rg_
 set AZURE_STORAGE_ACCESS_KEY= <your account key>
 az storage account show-connection-string --name $saccount_name --resource-group $location --output table
 az storage blob upload --account-name $saccount_name --container-name $name --name RDJ --file "E:/wall/rdj.jpg"
-az storage blob list --account-name $saccount_name --container-name $name -o table
-az storage blob delete --account-name $saccount_name --container-name $name --name rdj.jpg
+
 ```
 
