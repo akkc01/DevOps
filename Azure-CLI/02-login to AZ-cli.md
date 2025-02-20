@@ -9,6 +9,12 @@ az login
 ```powershell
 az account show -o table
 ```
+
+### Login in AZ account--
+```powershell
+az logout
+```
+
 ### Know the azure regions--
 ```powershell
 az account list-locations -o table
