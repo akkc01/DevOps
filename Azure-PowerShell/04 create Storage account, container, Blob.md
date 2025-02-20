@@ -58,6 +58,11 @@ $a_ctx = $storageAccount.Context
 $filePath = "E:/wall/3.jpeg"
 Set-AzStorageBlobContent -File $filePath -Container $container_Name -Context $a_ctx
 ```
+## Clean up resources--
+```powershell
+Remove-AzResourceGroup -Name $ResourceGroup
+```
+---
 
 ## Upload blobs to the container--
 ### upload a file to the default account (inferred) access tier
@@ -123,36 +128,7 @@ $DLBlob2HT = @{
 Get-AzStorageBlobContent @DLBlob2HT
 
 ```
-
-
-## Create a container--
-### Connect to your Azure subscription
- Connect-AzAccount
-### Create a context object using Azure AD credentials
- $ctx = New-AzStorageContext -StorageAccountName <storage account name> -UseConnectedAccount
-### Create variables
- $containerName  = "individual-container"
- $prefixName     = "loop"
-
-### Approach 1: Create a container
- New-AzStorageContainer -Name $containerName -Context $ctx
-
-### Approach 2: Create containers with a PowerShell loop
- for ($i = 1; $i -le 3; $i++) { 
-     New-AzStorageContainer -Name (-join($prefixName, $i)) -Context $ctx
-    }
-
-### Approach 3: Create containers using the PowerShell Split method
- "$($prefixName)4 $($prefixName)5 $($prefixName)6".split() | New-AzStorageContainer -Context $ctx
-
-
-
-
-## Clean up resources--
-Remove-AzResourceGroup -Name $ResourceGroup
-
-
-
+---
 
 # note--
 ```powershell
