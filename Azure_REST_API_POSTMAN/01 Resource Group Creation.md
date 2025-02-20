@@ -30,6 +30,7 @@ https://www.postman.com/downloads/
 auth Type -Bearer Token | <Token>
 ```
 - then paste Beare token in token field.
+  
 3- `Headers` tab settings-
 ```poweershell
     key             Value
