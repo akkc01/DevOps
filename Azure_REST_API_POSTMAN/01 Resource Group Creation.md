@@ -26,20 +26,20 @@ https://www.postman.com/downloads/
 - api-version       2024-11-01
 - 
 
-### `Authorization` tab settings-
+2- `Authorization` tab settings-
 ```powershell
 Type ---Bearer Token | <Token>
 
 ```
 
-### `Headers` tab settings-
+3- `Headers` tab settings-
 ```poweershell
     key             Value
 Authorization        Bearer {access token}
 Content_type        application/json
 ```
 
-### `Body` tab setting--
+4- `Body` tab setting--
 ```powershell
 {
     "location": "eastus",
@@ -53,7 +53,7 @@ Content_type        application/json
 }
 ```
 
-### output look like-
+4- output look like-
 ```powershell
 
 {
