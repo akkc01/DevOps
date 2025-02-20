@@ -112,7 +112,6 @@ resource "azurerm_virtual_machine" "example" {
 }
 
 ## Take Public IP as Output-
-
 ```powershell
 data "azurerm_public_ip" "example" {
   name                = azurerm_public_ip.example.name
