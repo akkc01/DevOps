@@ -5,14 +5,16 @@ az login
 ```
 
 ### Get the Subsciption-
-- Get the Subsciption id for your account using-
+- Get the Subsciption id for your account you using-
 ```powershell
 az account list --output table
 ```
-### Generate Token using AZ CLI-
+### now its time to Generate `Token` using AZ CLI-
+- Generate Token by this command-
 ```powershell
 az account get-access-token --query accessToken --output tsv
 ```
+Save this token somewhere for further use.
 ## Now Download Postman-
 - Download `Postman` from below link - 
 ```powershell
