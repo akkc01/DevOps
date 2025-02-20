@@ -9,11 +9,11 @@ Docker --version
 
 ## docker pull-
 - Description: Downloads a Docker image from a registry (such as Docker Hub).
-  ```powershell
+```powershell
 docker pull <image-name>:<tag>
-  ```
+```
 - Example-
- ```powershell
+```powershell
 docker pull ubuntu:latest
 ```
 
