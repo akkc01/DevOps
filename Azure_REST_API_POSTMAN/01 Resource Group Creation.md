@@ -5,7 +5,7 @@ az login
 ```
 
 ### Get the Subsciption-
-- Get the Subsciption id for your account you using-
+- Get the Subsciption id for your account-
 ```powershell
 az account list --output table
 ```
