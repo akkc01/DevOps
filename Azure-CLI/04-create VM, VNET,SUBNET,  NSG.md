@@ -31,7 +31,7 @@ az network nsg list --out table
 az network vnet delete -g akkc_rg -n VNet1
  ```
 
-### Create a VM-
+### Create Virtual Machine-
 
  **Create a Linux VM--**
 ```powershell
