@@ -25,6 +25,12 @@ docker run [OPTIONS] IMAGE [COMMAND] [ARGUMENTS...]
 - IMAGE: The name of the Docker image you want to run.
 - COMMAND (optional): The command you want to run inside the container.
 - ARGUMENTS (optional): Arguments to pass to the command.
+- ---
+- the field in small letters are mondetory ie constant(jo change nhi hota h), Capital means they are canbe changed ie. work as variables.
+- example-
+- ```powershell
+  docker run IMAGE     # here docker run can not changed but IMAGE can be different
+  ```
 ### Key Options and Flags for docker run:
 1. `-d, --detach`
 - Description: Runs the container in detached mode (in the background), so it doesn’t block your terminal.
