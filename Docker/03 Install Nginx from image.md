@@ -4,7 +4,7 @@
 ```powershell
 Docker search nginx
 ```
--choose the 1s one nginx.
+- choose the 1st image of nginx.
 ### Pull the Image from docker hub to local PC using-
 - Docker pull <image_name>.
 ```powershell
