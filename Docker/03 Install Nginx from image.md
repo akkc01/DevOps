@@ -24,6 +24,17 @@ Docker pull nginx
 docker run -d --name akkc nginx
 ```
 - replace the name akkc as your need.
+
+### Port Mapping-
+```powershell
+ docker run -i -t --name webapp 80:80 nginx
+```
+
+
+
+
+
+
 ## To Run the 50 instances of nginx-
 - run this command using Power Shell 7.x.x OR from Bash-
 ```powershell
