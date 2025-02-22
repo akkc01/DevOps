@@ -14,6 +14,10 @@ Docker pull nginx
 ```powershell
  docker run -d nginx
 ```
+- run nginx in detached mode-
+```powershell
+ docker run -d nginx
+```
 ### Rename the name of nginx instance-
 - replace the name akkc as your need.
 ```powershell
