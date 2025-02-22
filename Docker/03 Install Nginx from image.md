@@ -12,7 +12,7 @@ Docker pull nginx
 ```
 ### Run the nginx-
 ```powershell
- docker run -d nginx
+ docker run nginx
 ```
 - run nginx in detached mode-
 ```powershell
