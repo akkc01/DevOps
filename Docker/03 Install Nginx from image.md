@@ -27,13 +27,14 @@ docker run -d --name akkc nginx
 
 ### Port Mapping-
 ```powershell
- docker run -i -t --name webapp 80:80 nginx
+ docker run -p webapp 80:80 nginx
 ```
 
-
-
-
-
+### Run the nginx-
+```powershell
+ docker exec akkc_container ls
+ docker exec -i -t akkc_container bash
+```
 
 ## To Run the 50 instances of nginx-
 - run this command using Power Shell 7.x.x OR from Bash-
