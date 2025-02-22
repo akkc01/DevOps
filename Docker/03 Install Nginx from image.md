@@ -19,11 +19,12 @@ Docker pull nginx
  docker run -d nginx
 ```
 ### Rename the name of nginx instance-
-- replace the name akkc as your need.
+
 ```powershell
 docker run -d --name akkc nginx
 ```
-
+- replace the name akkc as your need.
+- 
 ## To Run the 50 instances of nginx-
 - run this command using Power Shell 7.x.x OR from Bash-
 ```powershell
