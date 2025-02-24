@@ -27,7 +27,8 @@ docker run -d --name akkc nginx
 
 ### Port Mapping-
 ```powershell
- docker run -p webapp 80:80 nginx
+docker run -p akkc 9090:80 nginx
+docker run -d --name akkc -p 8080:80 nginx   
 ```
 
 ### Run the nginx-
