@@ -33,9 +33,13 @@ docker run -d --name akkc nginx
 ### Run the nginx-
 ```powershell
  docker exec akkc_container ls
- docker exec -i -t akkc_container bash
+ docker exec -i -t container bash
+ docker exec -it akkc2 bash
 ```
-
+- change the nginx `index.html` file content-
+```powershell
+  echo "Welcome akkc2" > /usr/share/nginx/html/index.html
+```
 ## To Run the 50 instances of nginx-
 - run this command using Power Shell 7.x.x OR from Bash-
 ```powershell
