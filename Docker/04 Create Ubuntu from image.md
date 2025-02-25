@@ -1,4 +1,4 @@
 ### run the ubuntu container-
-```terraform
+```akkc
 - docker run -d --name linux4 -it ubuntu bash
 ```
