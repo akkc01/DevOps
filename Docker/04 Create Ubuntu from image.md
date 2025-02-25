@@ -28,11 +28,13 @@ docker run --name linux4 ubuntu bash
 docker run -d -it ubuntu
 ```
 ### Kill multiple container-
+- it wiil stop/kill all the running container-
 ```
 docker kill (docker ps -q)
 ```
 
 ### Remove/Delete multiple container-
+- it will delete all stoped container-
 ```
 docker rm (docker ps -a -q)
 ```
