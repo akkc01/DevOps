@@ -1,5 +1,5 @@
 ## Create Azure Storage Account-
-```powershell
+``` 
 # 1. Specify the version of the AzureRM Provider to use
 terraform {
   required_providers {
