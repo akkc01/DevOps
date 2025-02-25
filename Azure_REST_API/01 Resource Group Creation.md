@@ -1,23 +1,23 @@
 ## To Create Azure Storage Account using `REST-API` with `POSTMAN`-
 ### First we need to Login our Azure account using below command-
-```powershell
+``` 
 az login
 ```
 
 ### Get the Subsciption-
 - Get the Subsciption id for your account-
-```powershell
+``` 
 az account list --output table
 ```
 ### now its time to Generate `Token` using AZ CLI-
 - Generate Token by this command-
-```powershell
+``` 
 az account get-access-token --query accessToken --output tsv
 ```
 Save this token somewhere for further use.
 ## Download Postman-
 - Download `Postman` from below link - 
-```powershell
+``` 
 https://www.postman.com/downloads/
 ```
 ### Now Open Postman-
@@ -31,7 +31,7 @@ https://www.postman.com/downloads/
 - api-version       2024-11-01 
 
 2- `Authorization` tab settings-
-```powershell
+``` 
 auth Type -Bearer Token | <Token>
 ```
 - then paste Beare token in token field.
@@ -44,7 +44,7 @@ Content_type        application/json
 ```
 
 4- `Body` tab setting--
-```powershell
+``` 
 {
     "location": "eastus",
     "tags": {
@@ -58,7 +58,7 @@ Content_type        application/json
 ```
 
 4- output look like-
-```powershell
+``` 
 
 {
     "sku": {
