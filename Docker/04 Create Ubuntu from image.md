@@ -9,8 +9,10 @@ Docker pull ubuntu
 ```
 - docker run -d --name linux4 -it ubuntu bash
 ```
-
-
+### you can also used this-
+```
+docker run -d --name linux25022 -it ubuntu
+```
 ### Create multiple container-
 ```
 for ($i = 1; $i -le 50; $i++) {
