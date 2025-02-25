@@ -1,6 +1,6 @@
 ### Create AZ Storage Account, Container And Blob using Variables--
 1. -
-```powershell
+``` 
 $rg_name ="AKKC_B17_G22"
 $location ="eastus"
 $name ="akcontainer1"
@@ -15,7 +15,7 @@ az storage blob upload --account-name $saccount_name --container-name $name --na
 ```
 
 2. 
-```powershell
+``` 
 $rg_name ="AKKC_B17_G2"
 $location ="eastus"
 $name ="akkc"
