@@ -1,22 +1,22 @@
 ## Create and delete a Resource group--
 
 ### Create a resorce group--
-```powershell
+``` 
 az group create --name GroupName --location eastus
 ```
 - example-
-```powershell
+``` 
 az group create -name DevOps-AZ -location eastus
 az group create -n DevOps-AZ -l centralindia
 ```
 
 ### Know the azure regions--
-```powershell
+``` 
 az account list-locations -o table
 ```
 
 ### Set the Resource Group as default (Optional)--
-```powershell
+``` 
 az config set defaults.group=DevOps-AZ
 ```
 
