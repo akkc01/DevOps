@@ -163,8 +163,8 @@ docker rm container	                                          # Removes a runnin
 docker swarm leave	                                          # Leaves a swarm
 docker stack rm stackname	                                    # Removes a swarm
 docker volume rm $(docker volume ls -f dangling=true -q)    	# Removes all dangling volumes
-docker rm $(docker ps -a -q)	                                # Removes all stopped containers
-docker kill $ (docker ps -q)	                                # Stops all running containers
+docker rm (docker ps -a -q)	                                # Removes all stopped containers
+docker kill (docker ps -q)	                                # Stops all running containers
 
 ```
 
