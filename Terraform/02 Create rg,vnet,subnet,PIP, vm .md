@@ -1,13 +1,13 @@
 ## Create RG, VNET, SUBNET, NSG, Public IP, Network Interface---
 ### Create a RG-
-```powershell
+``` 
 resource "azurerm_resource_group" "example" {
   name     = "my_rg_01"
   location = "centralindia"
 }
 ```
 ### Create a Virtual Network(VNET)-
-```powershell
+``` 
 resource "azurerm_virtual_network" "example" {
   name                = "my_network"
   address_space       = ["192.168.2.0/24"]
@@ -16,7 +16,7 @@ resource "azurerm_virtual_network" "example" {
 }
 ```
 ### Create A Subnet-
-```powershell
+``` 
 resource "azurerm_subnet" "example" {
   name                 = "subnet1"
   resource_group_name  = azurerm_resource_group.example.name
@@ -25,7 +25,7 @@ resource "azurerm_subnet" "example" {
 }
 ```
 ### Create a Public IP-
-```powershell
+``` 
 resource "azurerm_public_ip" "example" {
   name                = "my_vm_01_PublicIp1"
   resource_group_name = azurerm_resource_group.example.name
@@ -34,7 +34,7 @@ resource "azurerm_public_ip" "example" {
   }
 ```
 ### Network Security Group-
-```powershell
+``` 
 resource "azurerm_network_security_group" "example" {
   name                = "my_nsg"
   location            = azurerm_resource_group.example.location
@@ -54,7 +54,7 @@ resource "azurerm_network_security_group" "example" {
 }
 ```
 ### Create a Network interface-
-```powershell
+``` 
 
 resource "azurerm_network_interface" "example" {
   name                = "my_vm-nic1"
@@ -71,14 +71,14 @@ resource "azurerm_network_interface" "example" {
 ```
 
 ### Network Security Group Association-
-```powershell
+``` 
 resource "azurerm_network_interface_security_group_association" "example" {
   network_interface_id      = azurerm_network_interface.example.id
   network_security_group_id = azurerm_network_security_group.example.id
 }
 ```
 ### Create a Virtual Machine-
-```powershell
+``` 
 resource "azurerm_virtual_machine" "example" {
   name                  = "my_ubuntu_vm"
   location              = azurerm_resource_group.example.location
@@ -113,7 +113,7 @@ resource "azurerm_virtual_machine" "example" {
 ```
 
 ## Take Public IP as Output-
-```powershell
+``` 
 data "azurerm_public_ip" "example" {
   name                = azurerm_public_ip.example.name
   resource_group_name = azurerm_virtual_machine.example.resource_group_name
