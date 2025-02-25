@@ -2,7 +2,8 @@
 
 ### Pull the Image-
 ```
-
+Docker pull ubuntu
+```
 
 ### run the ubuntu container-
 ```
