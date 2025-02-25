@@ -9,6 +9,15 @@ Docker pull ubuntu
 ```
 - docker run -d --name linux4 -it ubuntu bash
 ```
+
+
+### Create multiple container-
+```
+for ($i = 1; $i -le 50; $i++) {
+    docker run -d --name "BBPL_$i" -it ubuntu bash
+}
+```
+
 ### Test--
 ```
 docker run -d --name linux4 ubuntu bash
