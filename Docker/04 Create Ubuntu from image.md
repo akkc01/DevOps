@@ -1,4 +1,4 @@
-## Install the ubuntu using docker--
+## Install the ubuntu using docker-
 
 ### Pull the Image-
 ```
