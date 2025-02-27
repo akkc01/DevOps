@@ -7,18 +7,17 @@ Docker pull ubuntu
 
 ### run the ubuntu container-
 ```
-docker run -d --name linux4 -it ubuntu bash
+docker run -it  ubuntu
 ```
 ### you can also used this-
 ```
 docker run -d --name akkc1 -it ubuntu
-docker run -it --name akk1 ubuntu bash
 docker run -it --name akk1 ubuntu 
 ```
 ### Create multiple container-
 ```
 for ($i = 1; $i -le 50; $i++) {
-    docker run -d --name "BBPL_$i" -it ubuntu bash
+    docker run -d --name "BBPL_$i" -it ubuntu
 }
 ```
 
