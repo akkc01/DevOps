@@ -11,7 +11,9 @@ docker run -d --name linux4 -it ubuntu bash
 ```
 ### you can also used this-
 ```
-docker run -d --name linux25022 -it ubuntu
+docker run -d --name akkc1 -it ubuntu
+docker run -it --name akk1 ubuntu bash
+docker run -it --name akk1 ubuntu 
 ```
 ### Create multiple container-
 ```
