@@ -1,4 +1,4 @@
-# install nginx--
+# install nginx-
 ---
 
 ## Check Docker Version-
