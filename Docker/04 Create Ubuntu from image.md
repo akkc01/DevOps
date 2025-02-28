@@ -7,7 +7,7 @@ Docker pull ubuntu
 
 ### run the ubuntu container-
 ```
-docker run -it  ubuntu
+docker run -dit  ubuntu
 ```
 ### you can also used this-
 ```
