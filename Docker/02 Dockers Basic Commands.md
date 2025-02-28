@@ -8,7 +8,7 @@ Docker --version
 ```
 
 ### Pull Commands-
-- Description: Downloads a Docker image from a registry (such as Docker Hub).
+- `pull` downloads a Docker image from a registry (such as Docker Hub).
 ``` 
 docker pull <image-name>:<tag>
 ```
