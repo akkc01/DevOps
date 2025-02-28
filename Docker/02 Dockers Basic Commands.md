@@ -18,6 +18,7 @@ docker pull ubuntu:latest
 ```
 
 ## Run Commands-
+- `run`command create and start a container from a specified image.
 - Basic Syntax:
 ``` 
 docker run [OPTIONS] IMAGE [COMMAND] [ARGUMENTS...]
