@@ -18,5 +18,5 @@ terraform -version
 
 ### now login-
 ``` 
-- az login 
+az login 
 ```
