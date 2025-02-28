@@ -1,13 +1,13 @@
 # Docker Commands--
 ---
 
-## Check Docker Version-
+### Check Docker Version-
 - Description: Displays the version of Docker installed on your machine.
 ``` 
 Docker --version
 ```
 
-## Pull Commands-
+### Pull Commands-
 - Description: Downloads a Docker image from a registry (such as Docker Hub).
 ``` 
 docker pull <image-name>:<tag>
@@ -17,7 +17,7 @@ docker pull <image-name>:<tag>
 docker pull ubuntu:latest
 ```
 
-## Run Commands-
+### Run Commands-
 - `run`command create and start a container from a specified image.
 - Basic Syntax:
 ``` 
@@ -100,7 +100,7 @@ example-
 docker run -d -p 80:80 nginx
 ```
 
-## Container Interaction Commands-
+### Container Interaction Commands-
 - `Interactin`with containers:-
 ``` 
 docker start container	                                      # Starts a new container
@@ -119,7 +119,7 @@ docker commit container image	                                # Creates a new im
 docker create image	                                          # Creates a new container from an image
 
 ```
-## Registry Commands:-
+### Registry Commands:-
 - Commands:-
 ``` 
 docker image ls	             # Lists images
@@ -129,7 +129,7 @@ docker history image	       # Displays the image history
 docker inspect image	       # Displays low-level information about an image
 ```
 
-## Container Inspection Commands--
+### Container Inspection Commands--
 - Commands:-
 ``` 
 docker ps                   # list all running containers
@@ -142,7 +142,7 @@ docker stats container      # Shows container resource usage statistics
 
 ```
 
-## Build Commands--
+### Build Commands--
 - Commands-
 ``` 
 docker build	                                                        # Builds an image from a Dockerfile in the current directory
@@ -153,7 +153,7 @@ docker build -t image:1.0-<<EOFFROM busyboxRUN echo “hello world”EOF	# Build
 
 ```
 
-## Clean Up Commands:-
+### Clean Up Commands:-
 - Commands:-
 ``` 
 docker image prune	                                          # Clears an unused image
@@ -169,7 +169,7 @@ docker kill (docker ps -q)	                                # Stops all running c
 
 ```
 
-##  Manage Images Commands--
+###  Manage Images Commands--
 - Commands:-
 ``` 
 docker image ls	            # Lists images
@@ -181,7 +181,7 @@ docker inspect image	      # Displays low-level information about an image
 ```
 
 
-## Service Commands--
+### Service Commands--
 - Commands:-
 ``` 
 docker service ls	                             # Lists all services running in a swarm
@@ -193,7 +193,7 @@ docker service scale servicename=10	           # Scales one or more replicated s
 docker service logs stackname servicename	     # Lists all service logs
 ```
 
-## Network Commands-
+### Network Commands-
 - Commands:-
 ``` 
 docker network create networkname	                   # Creates a new network
@@ -203,7 +203,7 @@ docker network connect networkname container	       # Connects a container to a 
 docker network disconnect networkname container      # Disconnects a container from a network
 docker network inspect networkname	                 # Displays detailed information about a network
 ```
-## docker volume-
+### docker volume-
 - Description: Manages Docker volumes.
 - Common commands:
   ``` 
@@ -213,7 +213,7 @@ docker volume inspect <volume-name>: View details of a volume.
 docker volume rm <volume-name>: Remove a volume.
 ```
 
-## Compose Command-
+### Compose Command-
 - Description: Manages multi-container Docker applications using a docker-compose.yml file.
 -Common commands:
 ``` 
@@ -223,7 +223,7 @@ docker-compose build: Builds the services defined in docker-compose.yml.
 docker-compose logs: Fetches logs for the services in docker-compose.yml.
 ```
 
-## Tag Command-
+### Tag Command-
 - Description: Tags an image with a new name or version.
 - Usage:
   ``` 
@@ -233,7 +233,7 @@ Example-
 ``` 
 docker tag myapp:1.0 myapp:v2
 ```
-## save Command-
+### save Command-
 - Description: Saves a Docker image to a tarball archive.
 - Usage:
 ``` 
