@@ -2,7 +2,7 @@
 ---
 
 ### Check Docker Version-
-- `--version Displays the version of Docker installed on your machine.
+- `--version` displays the version of Docker installed on your machine.
 ``` 
 Docker --version
 ```
