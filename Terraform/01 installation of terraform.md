@@ -1,5 +1,5 @@
 # install terraform in windows pc-
--Go through the below link-
+- Go through the below link-
 ```powwershell
 https://learn.microsoft.com/en-us/azure/developer/terraform/get-started-windows- 
 ```
