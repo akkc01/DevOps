@@ -20,14 +20,6 @@ for ($i = 1; $i -le 50; $i++) {
     docker run -d --name "BBPL_$i" -it ubuntu
 }
 ```
-
-### Test--
-```
-docker run -d --name linux4 ubuntu bash
-docker run -it --name linux4  ubuntu bash
-docker run --name linux4 ubuntu bash
-docker run -d -it ubuntu
-```
 ### Kill multiple container-
 - it wiil stop/kill all the running container-
 ```
