@@ -3,7 +3,6 @@
 ### what is docker file ?
 - A Dockerfile is a text file containing instructions for building a container image.
 
-```
 - The Dockerfile supports the following instructions:
 
 - `Instruction` :  `Description`
