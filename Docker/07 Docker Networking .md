@@ -21,7 +21,7 @@ docker network connect network_name container_name
 docker network connect akkc ak_fire
 docker network connect my-net ubuntu
 ```
-### Connect container to network at the time of its creation-
+### Connect container to network & assign port at the time of its creation-
 ```
 docker run -d --name container_name --network network_name --port host_port:container_port -it nginx
 ```
