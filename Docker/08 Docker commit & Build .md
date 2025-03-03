@@ -17,3 +17,16 @@ docker commit -a "Author Name" -m "Added new features" <container_id> <new_image
 - `--pause`	  Pauses the container during commit
 - `-p, --pause-file`	  Pauses the container using a pause file during commit
 - `--platform`	  Sets the platform if not specified in the Dockerfile
+
+
+## Docker Buil command-
+- docker `build` command is used to create a custom Docker image.
+- It reads a Dockerfile located in your computer.
+- ust dot(.) for current dirrectory.
+```
+docker build -t <image_name> <path>
+```
+- for default path-
+```
+docker build -t <image_name> .(dot)
+```
