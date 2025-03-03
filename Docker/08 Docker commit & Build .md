@@ -7,6 +7,7 @@ docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
 - example-
 ```
 docker commit my_ubuntu  akkc:version1
+docker commit -a "Author Name" -m "Added new features" <container_id> <new_image_name>
 ```
 -Options of Docker Commit
 
