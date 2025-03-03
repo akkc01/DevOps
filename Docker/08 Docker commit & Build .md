@@ -8,7 +8,7 @@ docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
 ```
 docker commit my_ubuntu  akkc:version1
 ```
-- Options of Docker Commit
+-Options of Docker Commit
 
 - `-a, --author`  Specifies the author name for the image
 - `-c, --change`	  Applies Dockerfile instructions to the image
