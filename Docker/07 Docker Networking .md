@@ -5,7 +5,7 @@
 ```
 docker network create -d bridge my-net
 ```
-- it will create a bridge network name:my-net
+- it will create a bridge network name: my-net
 
 ### inspect a Network-
 ```
