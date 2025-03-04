@@ -66,17 +66,17 @@
 ### Azure Pricing-
 - Azure offers a pay-as-you-go pricing model, meaning you only pay for the resources and services you use. Azure also offers a free tier, which includes limited usage of certain services, and Azure Credits for new users to try out services. Pricing varies depending on the service, region, and usage.
 
-### Azure Services and Products (Examples)-
-    - Compute: Azure Virtual Machines, Azure Kubernetes Service (AKS), Azure Functions
-    - Storage: Azure Blob Storage, Azure Disk Storage, Azure File Storage
-    - Databases: Azure SQL Database, Cosmos DB, Azure Database for PostgreSQL/MySQL
-    - Networking: Azure Virtual Network, Azure Load Balancer, Azure VPN Gateway
-    - Security: Azure Active Directory, Azure Key Vault, Azure Security Center
-    - Analytics: Azure Synapse Analytics, Azure Machine Learning, Power BI
-    - AI: Azure Cognitive Services, Azure Bot Service
-    - DevOps: Azure DevOps, GitHub Actions
-    - IoT: Azure IoT Hub, Azure IoT Central
-    - Hybrid Cloud: Azure Stack, Azure Arc
+### Azure Services and Products (Examples)
+   - Compute: Azure Virtual Machines, Azure Kubernetes Service (AKS), Azure Functions
+   - Storage: Azure Blob Storage, Azure Disk Storage, Azure File Storage
+   - Databases: Azure SQL Database, Cosmos DB, Azure Database for PostgreSQL/MySQL
+   - Networking: Azure Virtual Network, Azure Load Balancer, Azure VPN Gateway
+   - Security: Azure Active Directory, Azure Key Vault, Azure Security Center
+   - Analytics: Azure Synapse Analytics, Azure Machine Learning, Power BI
+   - AI: Azure Cognitive Services, Azure Bot Service
+   - DevOps: Azure DevOps, GitHub Actions
+   - IoT: Azure IoT Hub, Azure IoT Central
+   - Hybrid Cloud: Azure Stack, Azure Arc
 ### Use Cases for Microsoft Azure
 - Web Hosting: Host and scale web applications.
 - Backup and Disaster Recovery: Protect and recover data in case of hardware failure or disaster.
