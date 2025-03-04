@@ -7,9 +7,8 @@ The Linux command line is a powerful interface that allows you to interact with 
 ### Basic Commands-
 Here are some of the most common and useful Linux commands:
 
-Command	Description
-pwd	Print working directory — Shows the current directory you're in.
-ls	List — Lists files and directories in the current directory.
+- `pwd`	Print working directory — Shows the current directory you're in.
+- `ls`	List — Lists files and directories in the current directory.
 cd <directory>	Change directory — Navigates to a specified directory. Example: cd /home/user
 cp <source> <dest>	Copy — Copies files or directories. Example: cp file1.txt file2.txt
 mv <source> <dest>	Move — Moves files or renames them. Example: mv oldname.txt newname.txt
