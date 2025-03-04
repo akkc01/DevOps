@@ -111,6 +111,6 @@ Container Communication:
 - Containers on the same Docker network can communicate directly with each other by container name or IP.
 - Different Networks: Containers on different networks cannot communicate unless you connect the networks or expose ports.
 #### Docker Compose and Networking:
--When using Docker Compose, all containers defined in a docker-compose.yml file are by default placed on the same network, allowing them to communicate by their container names.
+- When using Docker Compose, all containers defined in a docker-compose.yml file are by default placed on the same network, allowing them to communicate by their container names.
 -You can also define custom networks in Compose files.
 
