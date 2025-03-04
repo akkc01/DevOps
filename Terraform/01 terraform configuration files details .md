@@ -1,4 +1,20 @@
-## Terraform files detail-
+### Terraform configuration files-
+- Terraform, configuration files define the infrastructure resources you want to create, modify, or delete. These files are written in HashiCorp Configuration Language (HCL), which is designed to be both human-readable and machine-friendly. Terraform configuration files are used to define your providers, resources, variables, outputs, modules, and more.
+
+### Terraform main configuration files-
+- These are the .tf files where you define your infrastructure resources and logic.
+
+- `main.tf`: This is typically the primary configuration file, where most of your resource definitions live. You specify your providers, resources, and the structure of your infrastructure here.
+
+- `variables.tf`: This file defines the variables that allow you to parameterize your Terraform configuration. You define input variables in this file so that values can be passed to the configuration during runtime.
+
+- `outputs.tf`: This file defines the outputs from your Terraform configuration, which can be values you want to display to the user after Terraform runs (e.g., public IP of a newly created server).
+
+- `providers.tf`: This file defines the configuration for the providers (e.g., AWS, Azure, Google Cloud) you are using. You specify the provider and any necessary credentials or region configuration.
+
+`terraform.tfvars`: This file is used to set values for variables that are defined in variables.tf. It's typically used for environment-specific values and can be excluded from version control for sensitive data.
+
+### Other Terraform file details-
 -certain files are created and used during the execution of Terraform commands-
 - `.terraform Directory`
 - `.terraform.lock.hcl`
@@ -16,7 +32,8 @@ The `.terraform` directory is automatically created by Terraform when you initia
 - The `terraform.tfstate` file is a state file that contains the current state of the infrastructure managed by Terraform. Terraform uses this file to keep track of which resources exist, their current values, and their relationships. When you run terraform apply, Terraform compares the current state (in terraform.tfstate) with the desired state described in the configuration files (e.g., main.tf) to determine what changes need to be made.
 
 -In Short--
-
 - `.terraform`	- Contains internal files, including provider plugins and module downloads (not for versioning).
 - `.terraform.lock.hcl`	- Locks provider versions to ensure consistent versions are used across environments.
 - `terraform.tfstate`	- Tracks the current state of your infrastructure (e.g., resources, their configurations, and IDs).
+
+
