@@ -1,4 +1,4 @@
-## Terraform configuration files detail-
+## Terraform files detail-
 -certain files are created and used during the execution of Terraform commands-
 - `.terraform Directory`
 - `.terraform.lock.hcl`
