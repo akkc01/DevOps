@@ -2,7 +2,7 @@
 - Azure DevOps helps teams plan, develop, test, deliver, and monitor software applications. It is designed to support the DevOps lifecycle, which focuses on collaboration between software development and IT operations teams to deliver high-quality software faster.
 
 - Key Features of Azure DevOps:
-    - Azure DevOps provides a suite of tools for managing the software development lifecycle, including:
+- Azure DevOps provides a suite of tools for managing the software development lifecycle, including:
 
     - Azure Repos: Git repositories for source control. It allows teams to manage code in a central repository using Git or Team Foundation Version Control (TFVC).
 
