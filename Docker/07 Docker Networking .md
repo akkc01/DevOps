@@ -48,7 +48,7 @@ docker run -dit --network network_name -p 8888:3000 linuxserver/firefox
 - default port for `linuxserver/firefox's` is:3000
 
 
-#### 2- Host Network-
+### 2- Host Network-
 - Use Case: When you want the container to share the host machine's networking namespace.
 - Description: The container will share the host's network stack and will not get its own IP address. Instead, it uses the host's IP and network interfaces. This is suitable when you need high network performance and don’t need network isolation.
 
