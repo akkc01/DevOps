@@ -3,7 +3,7 @@
 ### Types of Docker Networks-
 - Docker has several types of networks, each suited to different use cases. These network types are known as network drivers.
 
-### 1-Bridge Network (default)
+### 1- Bridge Network (default)
 - Use Case: This is the default network driver for Docker containers.
 - Description: When you run a container without specifying a network, Docker will connect it to a bridge network. This is a private, internal network on your host machine.
 
@@ -17,12 +17,12 @@ docker network create -d bridge my-net
 ```
 - it will create a bridge network name: my-net
 
-### inspect a Network-
+#### inspect a Network-
 ```
 docker network inspect my-net
 ```
 - it will shows the all the ips assigned to the container's, dns and address space of the network.
-### how to cnnect a container to network-
+#### how to cnnect a container to network-
 ```
 docker network connect network_name container_name
 ```
@@ -31,7 +31,7 @@ docker network connect network_name container_name
 docker network connect akkc ak_fire
 docker network connect my-net ubuntu
 ```
-### Connect container to network & assign port at the time of its creation-
+#### Connect container to network & assign port at the time of its creation-
 ```
 docker run -d --name container_name --network network_name --port host_port:container_port -it nginx
 ```
@@ -48,7 +48,7 @@ docker run -dit --network network_name -p 8888:3000 linuxserver/firefox
 - default port for `linuxserver/firefox's` is:3000
 
 
-### 2- Host Network-
+#### 2- Host Network-
 - Use Case: When you want the container to share the host machine's networking namespace.
 - Description: The container will share the host's network stack and will not get its own IP address. Instead, it uses the host's IP and network interfaces. This is suitable when you need high network performance and don’t need network isolation.
 
