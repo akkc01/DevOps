@@ -15,8 +15,8 @@
     - Cosmos DB: A globally distributed, multi-model database service.
 ##### Networking:-
 - Azure offers a wide variety of networking tools to manage how your resources communicate with each other, as well as with external networks. This includes:
-                                                                                        
-        - Virtual Networks (VNets): Isolated private networks in Azure.
+-
+       - Virtual Networks (VNets): Isolated private networks in Azure.
         - Load Balancer: Distributes traffic across multiple resources to ensure reliability.
         - Azure Firewall: Protects your network by controlling inbound and outbound traffic.
         - VPN Gateway: Allows secure connections to on-premises networks.
