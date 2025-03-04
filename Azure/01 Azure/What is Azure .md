@@ -3,7 +3,8 @@
 
 ### Key Features of Microsoft Azure-
 ##### Compute Services:
-- Azure provides scalable computing power that allows businesses to run virtual machines (VMs), containers, and other applications in the cloud. Some of the key services include:-
+- Azure provides scalable computing power that allows businesses to run virtual machines (VMs), containers, and other applications in the cloud. Some of the key services include:
+ 
     - Virtual Machines (VMs): Scalable compute resources for running virtualized operating systems.
     - Azure Kubernetes Service (AKS): Managed Kubernetes cluster for orchestrating containers.
     - App Services: A platform for hosting web apps, REST APIs, and mobile backends.
@@ -13,7 +14,8 @@
     - Azure SQL Database: A fully managed relational database service based on SQL Server.
     - Cosmos DB: A globally distributed, multi-model database service.
 ##### Networking:-
-- Azure offers a wide variety of networking tools to manage how your resources communicate with each other, as well as with external networks. This includes:-                                                                                                 
+- Azure offers a wide variety of networking tools to manage how your resources communicate with each other, as well as with external networks. This includes:
+                                                                                        
         - Virtual Networks (VNets): Isolated private networks in Azure.
         - Load Balancer: Distributes traffic across multiple resources to ensure reliability.
         - Azure Firewall: Protects your network by controlling inbound and outbound traffic.
