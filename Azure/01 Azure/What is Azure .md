@@ -51,7 +51,6 @@
 
 ### Benefits of Microsoft Azure-
 - Scalability: You can easily scale resources up or down depending on demand. This helps businesses pay only for what they use without over-provisioning.
-- 
 - Global Reach: Azure operates in over 60 regions around the world, enabling businesses to deploy their services in different geographic locations, ensuring low latency and high availability.
 
 - Security: Azure provides enterprise-grade security features, including multi-layered security, encryption, identity management, and compliance certifications.
