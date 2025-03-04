@@ -12,7 +12,7 @@
 
 - `providers.tf`: This file defines the configuration for the providers (e.g., AWS, Azure, Google Cloud) you are using. You specify the provider and any necessary credentials or region configuration.
 
-`terraform.tfvars`: This file is used to set values for variables that are defined in variables.tf. It's typically used for environment-specific values and can be excluded from version control for sensitive data.
+- `terraform.tfvars`: This file is used to set values for variables that are defined in variables.tf. It's typically used for environment-specific values and can be excluded from version control for sensitive data.
 
 ### Other Terraform file details-
 -certain files are created and used during the execution of Terraform commands-
