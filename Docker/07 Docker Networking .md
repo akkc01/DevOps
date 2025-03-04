@@ -3,7 +3,7 @@
 ### Types of Docker Networks-
 - Docker has several types of networks, each suited to different use cases. These network types are known as network drivers.
 
-### Bridge Network (default)
+### 1-Bridge Network (default)
 - Use Case: This is the default network driver for Docker containers.
 - Description: When you run a container without specifying a network, Docker will connect it to a bridge network. This is a private, internal network on your host machine.
 
@@ -48,7 +48,7 @@ docker run -dit --network network_name -p 8888:3000 linuxserver/firefox
 - default port for `linuxserver/firefox's` is:3000
 
 
-### Host Network-
+### 2- Host Network-
 - Use Case: When you want the container to share the host machine's networking namespace.
 - Description: The container will share the host's network stack and will not get its own IP address. Instead, it uses the host's IP and network interfaces. This is suitable when you need high network performance and don’t need network isolation.
 
@@ -59,7 +59,7 @@ Example:
 ```
 docker run -d --name container_name --network host my_image
 ```
-### Overlay Network-
+### 3- Overlay Network-
 - Use Case: Used in Docker Swarm or multi-host setups to allow containers running on different hosts to communicate.
 - Description: The overlay network allows containers on different Docker hosts to communicate as if they were on the same local network. This is essential in a distributed system where you have multiple Docker hosts in a cluster.
 - How it works: Docker creates a virtual network that spans across multiple Docker hosts, making container communication across hosts possible. This is commonly used with Docker Swarm or Kubernetes for multi-host container orchestration.
@@ -70,7 +70,7 @@ Example:
 docker network create --driver overlay my_overlay_network
 ```
 
-### Macvlan Network-
+### 4- Macvlan Network-
 - Use Case: When you want containers to appear as full-fledged devices on your network with their own MAC addresses.
 - Description: The macvlan network driver allows containers to have their own MAC address and appear as separate devices on the network. This is useful if you need the container to behave like a physical machine on the network.
 - How it works: Containers get their own IP addresses within the host’s network and can communicate directly with other devices on the physical network. However, containers can’t directly communicate with the Docker host itself.
@@ -82,7 +82,7 @@ docker network create -d macvlan \
   --subnet=192.168.1.0/24 --gateway=192.168.1.1 \
   -o parent=eth0 my_macvlan_network
 ```
-### None Network-
+### 5- None Network-
 - Use Case: When you don’t want containers to have network access.
 - Description: The container will have no network interfaces and no access to the network. You can manually configure networking or use other means to access the container.
 - How it works: This is typically used in cases where you want to isolate the container completely, or you are managing networking in other ways.
