@@ -1,5 +1,5 @@
 ## What is Linux?
--Linux is an open-source operating system kernel that serves as the core part of many operating systems. Distributions (distros) like Ubuntu, CentOS, Debian, and Fedora package Linux with additional software to provide a complete OS.
+Linux is an open-source operating system kernel that serves as the core part of many operating systems. Distributions (distros) like Ubuntu, CentOS, Debian, and Fedora package Linux with additional software to provide a complete OS.
 
 ### The Linux Command Line (Terminal)
 The Linux command line is a powerful interface that allows you to interact with the system by typing text commands. It's essential for performing administrative tasks and automating processes.
