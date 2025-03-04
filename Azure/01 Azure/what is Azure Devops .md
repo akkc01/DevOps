@@ -1,4 +1,4 @@
-### What is Aure DEvops-
+### What is Aure Devops-
 - Azure DevOps helps teams plan, develop, test, deliver, and monitor software applications. It is designed to support the DevOps lifecycle, which focuses on collaboration between software development and IT operations teams to deliver high-quality software faster.
 
 - Key Features of Azure DevOps:
