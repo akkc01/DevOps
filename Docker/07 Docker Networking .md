@@ -1,4 +1,4 @@
-## Docker network drivers-
+## Docker networking-
 ---
 ### Types of Docker Networks-
 - Docker has several types of networks, each suited to different use cases. These network types are known as network drivers.
