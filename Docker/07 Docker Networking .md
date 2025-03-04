@@ -93,24 +93,24 @@ Example:
 docker run -d --name container_name --network none my_image
 Key Concepts in Docker Networking
 ```
-## Key Concepts in Docker Networking-
+### Key Concepts in Docker Networking-
 ---
-### Network Bridge:
+#### Network Bridge:
 - Each container gets an internal IP address on the bridge network. These containers can communicate with each other by IP, but to communicate with the outside world, you must expose ports.
 
-### Port Mapping:
+#### Port Mapping:
 - Docker allows you to map container ports to host machine ports, making the services inside containers accessible externally.
 - Example: docker run -p 8080:80 my_image will map port 80 inside the container to port 8080 on the host.
 
-### DNS Resolution:
+#### DNS Resolution:
 - Docker containers on the same network can resolve each other’s names using DNS, and you can access a container by its name rather than its IP address.
 - Example: A container named web can be accessed from another container on the same network using web:80.
 Container Communication:
 
-### Same Network: 
+#### Same Network: 
 - Containers on the same Docker network can communicate directly with each other by container name or IP.
 - Different Networks: Containers on different networks cannot communicate unless you connect the networks or expose ports.
-### Docker Compose and Networking:
+#### Docker Compose and Networking:
 -When using Docker Compose, all containers defined in a docker-compose.yml file are by default placed on the same network, allowing them to communicate by their container names.
 -You can also define custom networks in Compose files.
 
