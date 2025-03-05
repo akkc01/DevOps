@@ -1,6 +1,6 @@
-### Create a Docker file-
+### Create a Dockerfile-
 
-### what is docker file ?
+### what is Dockerfile ?
 - A Dockerfile is a text file containing instructions for building a container image.
 
 - The Dockerfile supports the following instructions:
