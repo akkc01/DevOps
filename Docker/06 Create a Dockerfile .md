@@ -29,17 +29,18 @@
 ### dockerfile for ubuntu-
 ```
 # syntax=docker/dockerfile:1
-FROM ubuntu:22.04
+FROM ubuntu:latest
+
+LABEL maintainer="akkc <akkc@gmail.com>"
 
 # install app dependencies
-RUN apt-get update && apt-get install -y python3 python3-pip
-RUN pip install flask==3.0.*
+RUN apt update && apt install net-tools
 
-# install app
-COPY hello.py /
+RUN apt install -y iputils-ping
 
-# final configuration
-ENV FLASK_APP=hello
-EXPOSE 8000
-CMD ["flask", "run", "--host", "0.0.0.0", "--port", "8000"]
+SHELL ["/bin/bash", "-c"]
+
+VOLUME ["/Akkc_data"]
+
+ENTRYPOINT ["/bin/bash", "-c"]
 ```
