@@ -38,9 +38,9 @@ RUN apt update && apt install net-tools
 
 RUN apt install -y iputils-ping
 
-SHELL ["/bin/bash", "-c"]
+SHELL ["/bin/bash"]
 
 VOLUME ["/Akkc_data"]
 
-ENTRYPOINT ["/bin/bash", "-c"]
+ENTRYPOINT ["/bin/bash"]
 ```
