@@ -8,8 +8,9 @@ Docker network drivers are used to manage how containers communicate with each o
 ### 1- Bridge Network (default)
 The bridge network driver is the default network driver in Docker. It creates a private internal network on the host where containers can communicate with each other.
 - Use Case: This is the default network driver for Docker containers. Ideal for applications that run in containers on the same host and need to communicate with each other.
-- Description: When you start Docker, a default bridge network is created automatically.
-- When you run a container without specifying a network, Docker will connect it to a bridge network. This is a private, internal network on your host machine.
+- Description:
+  - When you start Docker, a default bridge network is created automatically.
+  - When you run a container without specifying a network, Docker will connect it to a bridge network. This is a private, internal network on your host machine.
 
 - How it works: Containers on the same bridge network can communicate with each other using their IP addresses. However, containers on different bridge networks or the host network cannot directly communicate unless exposed through port mappings.
 
