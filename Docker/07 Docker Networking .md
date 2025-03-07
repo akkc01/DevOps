@@ -1,6 +1,7 @@
 ## Docker networking-
-Docker network drivers are used to manage how containers communicate with each other and with the outside world.
 ---
+Docker network drivers are used to manage how containers communicate with each other and with the outside world.
+
 ### Types of Docker Networks-
 - Docker has several types of networks, each suited to different use cases. These network types are known as network drivers.
 
