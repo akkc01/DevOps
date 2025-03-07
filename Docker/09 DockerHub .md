@@ -7,15 +7,13 @@ Docker Hub is a cloud-based registry service provided by Docker that allows you 
 ```
 docker login
 ```
-- Tag the Image:
-    -Ensure your image is tagged correctly with the registry's hostname and the repository name.
+- Tag the Image: Ensure your image is tagged correctly with the registry's hostname and the repository name.
 ```
 docker tag myimage:latest registry-host:5000/myname/myimage:latest
 
 docker tag akkc amitkkc01/ubuntu:v1
 ```
-- Push the Image:
-    - Use the `docker push` command to upload the image to the registry.
+- Push the Image: Use the `docker push` command to upload the image to the registry.
 ```
 docker push registry-host:5000/myname/myimage:latest
 
