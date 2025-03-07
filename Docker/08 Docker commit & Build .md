@@ -22,7 +22,7 @@ docker commit -a "Author Name" -m "Added new features" <container_id> <new_image
 ## Docker Build command-
 - docker `build` command is used to create a custom Docker image.
 - It reads a Dockerfile located in your computer.
-- ust dot(.) for current dirrectory.
+- use dot(.) for current dirrectory.
 ```
 docker build -t <image_name> <path>
 ```
