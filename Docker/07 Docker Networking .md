@@ -54,8 +54,8 @@ docker run -dit --network network_name -p 8888:3000 linuxserver/firefox
 
 
 ### 2- Host Network-
-- Use Case: When you want the container to share the host machine's networking namespace.
-- Description: The container will share the host's network stack and will not get its own IP address. Instead, it uses the host's IP and network interfaces. This is suitable when you need high network performance and don’t need network isolation.
+- Use Case: The container shares the host's network stack and can When you want the container to share the host machine's networking namespace.
+- Description: The container will share the host's network stack (access the same network interfaces as the host) and will not get its own IP address. Instead, it uses the host's IP and network interfaces. This is suitable when you need high network performance and don’t need network isolation.
 
 - How it works: The container can directly access all the host's network interfaces and resources, but the container's network is tied to the host machine.
  Accessing External Services: External services can communicate directly with the container using the host's IP address and ports.
