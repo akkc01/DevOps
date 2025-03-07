@@ -96,7 +96,6 @@ docker network create -d macvlan \
 Example:
 ```
 docker run -d --name container_name --network none my_image
-Key Concepts in Docker Networking
 ```
 ### Key Concepts in Docker Networking-
 ---
