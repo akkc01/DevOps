@@ -18,27 +18,27 @@
 ```
 git init
 ```
--`git clone`: Creates a local copy of an existing remote repository.
+- `git clone`: Creates a local copy of an existing remote repository.
 ```
 git clone <repository_url>
 ````
--git add`: Stages changes (adds files to the next commit).
+- `git add`: Stages changes (adds files to the next commit).
 ```
 git add <file>
 ```
--`git commit`: Records the staged changes in the repository with a message.
+- `git commit`: Records the staged changes in the repository with a message.
 ```
 git commit -m "Commit message"
 ```
--`git status`: Shows the current status of the working directory and staging area.
+- `git status`: Shows the current status of the working directory and staging area.
 ```
 git status
 ```
--`git push`: Uploads local commits to a remote repository.
+- `git push`: Uploads local commits to a remote repository.
 ```
 git push <remote> <branch>
 ```
--`git pull`: Fetches changes from a remote repository and merges them into the local branch.
+- `git pull`: Fetches changes from a remote repository and merges them into the local branch.
 ```
 git pull <remote> <branch>
 ```
