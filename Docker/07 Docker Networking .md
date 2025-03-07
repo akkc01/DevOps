@@ -88,7 +88,7 @@ docker network create -d macvlan \
   -o parent=eth0 my_macvlan_network
 ```
 ### 5- None Network-
-- Use Case: When you don’t want containers to have network access.
+- Use Case: Useful for containers that do not need network connectivity or when you want to manually configure the container's network.
 - Description: Isolates a container from the host's network and other containers. The container has no network interfaces apart from the loopback interface. The container will have no network interfaces and no access to the network. You can manually configure networking or use other means to access the container.
 - How it works: This is typically used in cases where you want to isolate the container completely, or you are managing networking in other ways.
 - Accessing External Services: There is no direct external communication with the container unless manually configured.
