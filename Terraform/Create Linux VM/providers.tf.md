@@ -1,4 +1,5 @@
-# Before runnung terraform validate & plan, Login via -- `az login`
+## Before running terraform validate & plan, we should login in azure.
+- Login via -- `az login`
 
 # 1. Specify the version of the AzureRM Provider to use-
 ```powershell
