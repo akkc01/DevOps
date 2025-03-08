@@ -90,7 +90,6 @@ data "aws_ami" "latest" {
 
 * Dynamic Block-
 A dynamic block is a special block used when you need to generate nested blocks (sub-blocks) based on a list or map of values. It's useful when you need to conditionally create blocks or repeat a set of blocks for a resource.
-
 The dynamic block allows Terraform to generate nested blocks dynamically using a for-each loop or condition. It's primarily used for resources that expect a list or map of sub-blocks, and you don't want to manually repeat the same block for each item in the list.
 
 ```
@@ -101,5 +100,14 @@ dynamic "block_type" {
   }
 }
 ```
+
+* import Block-
+The terraform import command allows you to import an existing infrastructure resource into Terraform’s state file. This is useful if you have an existing resource (e.g., an EC2 instance, a VPC, or an S3 bucket) that was created manually or outside of Terraform, and you want to start managing it using Terraform.
+
+```
+terraform import <resource_type>.<resource_name> <resource_id>
+terraform import aws_instance.example i-0abcd1234efgh5678
+```
+
 
 These blocks are the building blocks of Terraform configurations and enable you to define, manage, and organize your infrastructure as code.
