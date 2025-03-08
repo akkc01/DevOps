@@ -21,8 +21,6 @@ provider "azurerm" {
   # information can be found here:
   # https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/features-block
   features {}
-  subscription_id = "your subscription_id"
-  tenant_id       = "your tenant_id"
 }
 ```
 
