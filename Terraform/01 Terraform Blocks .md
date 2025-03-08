@@ -1,12 +1,30 @@
-### Terraform Blocks-
-Terraform uses a variety of "blocks" to define infrastructure resources and configurations. Here are some common Terraform blocks:
+### Blocks in terraform-
+A block used to define and configure infrastructurs. Terraform uses a variety of "blocks" to define infrastructure resources and configurations. Here are some common Terraform blocks:
 
+* terraform Block-
+Provides overall settings for Terraform configuration.
+Required_providers block is used to specify which provider plugins are required for your Terraform configuration.
+The required_providers block is typically defined within the terraform block at the top of your configuration file.
+
+```
+terraform {
+  required_version = ">= 0.12"
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = ">= 3.0"
+    }
+  }
+}
+```
 
 * Provider Block -
 Specifies the provider (e.g., AWS, Azure, Google Cloud) and its configuration.
 ```
-provider "aws" {
-  region = "us-west-2"
+provider "azurerm" {
+  features {}
+  subscription_id = "your Sub_id"
 }
 ```
 
@@ -70,4 +88,19 @@ data "aws_ami" "latest" {
   owners      = ["self"]
 }
 ```
+
+* Dynamic Block-
+A dynamic block is a special block used when you need to generate nested blocks (sub-blocks) based on a list or map of values. It's useful when you need to conditionally create blocks or repeat a set of blocks for a resource.
+
+The dynamic block allows Terraform to generate nested blocks dynamically using a for-each loop or condition. It's primarily used for resources that expect a list or map of sub-blocks, and you don't want to manually repeat the same block for each item in the list.
+
+```
+dynamic "block_type" {
+  for_each = <expression>
+  content {
+    # nested block configuration
+  }
+}
+```
+
 These blocks are the building blocks of Terraform configurations and enable you to define, manage, and organize your infrastructure as code.
