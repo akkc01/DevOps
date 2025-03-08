@@ -4,7 +4,7 @@ A block used to define and configure infrastructurs. Terraform uses a variety of
 * terraform Block - 
 Provides overall settings for Terraform configuration.
 `Required_providers` block is used to specify which provider plugins are required for your Terraform configuration.
-The `required_providers` block is typically defined within the `terraform block` at the top of your configuration file.
+The `required_providers` block is typically defined within the `terraform block` at the top of the configuration file.
 
 ```
 terraform {
