@@ -21,6 +21,7 @@ git init
 - `git clone`: Creates a local copy of an existing remote repository.
 ```
 git clone <repository_url>
+git clone "https://github.com/devopsinsiders/starbucks-clone.git"
 ````
 - `git add`: Stages changes (adds files to the next commit).
 ```
