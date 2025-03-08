@@ -2,7 +2,7 @@
 Terraform uses a variety of "blocks" to define infrastructure resources and configurations. Here are some common Terraform blocks:
 
 
-*Provider Block-
+* Provider Block *-
 Specifies the provider (e.g., AWS, Azure, Google Cloud) and its configuration.
 ```
 provider "aws" {
