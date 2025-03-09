@@ -16,6 +16,8 @@ terraform destroy
 
 - `terraform apply`: Applies the changes required to reach the desired state of the configuration.
 
+      `terraform apply -auto-approve` - Skips interactive approval of the plan before applying. Terraform ignores this option when you pass a previously-saved plan file. This is because Terraform interprets the act of passing the plan file as the approval.
+
 - `terraform destroy`: Destroys the Terraform-managed infrastructure.
 
 - `terraform validate`: Validates the configuration files in the directory.
