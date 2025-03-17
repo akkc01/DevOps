@@ -12,6 +12,7 @@ cd elearn-frontend
 
 ### **step-2 create the dockerfile**
 configuration of dockerfile-
+**note**: dockerfile neme should be `Dockerfile`
 ```sh
 
 FROM node
