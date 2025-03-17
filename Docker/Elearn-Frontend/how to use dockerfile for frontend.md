@@ -1,5 +1,5 @@
 ## Follow these steps-
-### ** step-1 install git**
+### **step-1 install git**
 
 - **git** should be installed in your desktop.
 - then clone the frontend repo using
