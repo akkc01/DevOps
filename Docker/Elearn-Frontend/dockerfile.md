@@ -1,3 +1,5 @@
+## Dockerfile content-
+```
 # Use an explicit version tag for better control over the environment.
 FROM node:14  
 
@@ -25,3 +27,5 @@ EXPOSE 80
 
 # Start Nginx in the foreground to serve the static files
 CMD ["nginx", "-g", "daemon off;"]
+
+```
