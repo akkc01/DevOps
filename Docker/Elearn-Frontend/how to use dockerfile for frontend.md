@@ -43,17 +43,17 @@ EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 
 ```
-### **step- 3 build the image **
+### **step- 3 build the image**
 build the image using-
 ```sh
 docker build -t elearn_front:v1
 ```
 
-### **step- 4 create container using the image **
+### **step- 4 create container using the image**
 ```sh
 docker run -dit --name elearn -p 8888:80 elearn_front:v1
 ```
-### **step- 5 test on localhost **
+### **step- 5 test on localhost**
 open your browser type in addressbar-
 ```sh
 localhost:8888
