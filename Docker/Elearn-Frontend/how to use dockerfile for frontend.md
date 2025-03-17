@@ -11,8 +11,10 @@ cd elearn-frontend
 **Note**: Create Dockerfile inside the clone folder.
 
 ### **step-2 create the dockerfile**
-configuration of dockerfile-
+
 **note**: dockerfile neme should be `Dockerfile`
+configuration of dockerfile-
+
 ```sh
 
 FROM node
