@@ -8,7 +8,7 @@ git clone https://github.com/devopsinsiders/elearn-frontend.git
 cd elearn-frontend
 ```
 
-**Note**: Crete Dockerfile inside the clone folder.
+**Note**: Create Dockerfile inside the clone folder.
 
 ### **step-2 create the dockerfile**
 configuration of dockerfile-
