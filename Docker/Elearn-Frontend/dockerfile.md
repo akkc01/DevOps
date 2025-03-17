@@ -1,5 +1,5 @@
 ## Dockerfile content-
-Copy the following code in your dockerfile save & run.
+Copy and paste the following code in your dockerfile save & run.
 
 ---
 
