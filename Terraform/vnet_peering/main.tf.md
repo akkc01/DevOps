@@ -21,34 +21,34 @@ resource "azurerm_virtual_network" "vnet2" {
   resource_group_name = var.resource_group_name
 }
 
-resource "azurerm_subnet" "subnet11" {
+resource "azurerm_subnet" "vnet1-subnet1" {
   depends_on           = [azurerm_virtual_network.vnet1]
-  name                 = var.subnet11
+  name                 = var.subnet1
   resource_group_name  = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.vnet1.name
   address_prefixes     = ["192.168.1.0/25"]
 }
 
-resource "azurerm_subnet" "subnet12" {
+resource "azurerm_subnet" "vnet1-subnet2" {
   depends_on           = [azurerm_virtual_network.vnet1]
-  name                 = var.subnet22
+  name                 = var.subnet2
   resource_group_name  = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.vnet1.name
   address_prefixes     = ["192.168.1.128/25"]
 }
 
 
-resource "azurerm_subnet" "subnet22" {
+resource "azurerm_subnet" "vnet2-subnet1" {
   depends_on           = [azurerm_virtual_network.vnet2]
-  name                 = var.subnet11
+  name                 = var.subnet1
   resource_group_name  = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.vnet2.name
   address_prefixes     = ["192.168.2.0/25"]
 }
 
-resource "azurerm_subnet" "subnet23" {
+resource "azurerm_subnet" "vnet2-subnet2" {
   depends_on           = [azurerm_virtual_network.vnet2]
-  name                 = var.subnet22
+  name                 = var.subnet2
   resource_group_name  = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.vnet2.name
   address_prefixes     = ["192.168.2.128/25"]
@@ -112,7 +112,7 @@ resource "azurerm_network_interface" "vnet1-nic" {
 
   ip_configuration {
     name                          = "testconfiguration1"
-    subnet_id                     = azurerm_subnet.subnet11.id
+    subnet_id                     = azurerm_subnet.vnet1-subnet1.id
     private_ip_address_allocation = "Dynamic"
     public_ip_address_id          = azurerm_public_ip.vm1-publicip.id
   }
@@ -125,7 +125,7 @@ resource "azurerm_network_interface" "vnet2-nic" {
 
   ip_configuration {
     name                          = "testconfiguration2"
-    subnet_id                     = azurerm_subnet.subnet22.id
+    subnet_id                     = azurerm_subnet.vnet2-subnet1.id
     private_ip_address_allocation = "Dynamic"
     public_ip_address_id          = azurerm_public_ip.vm2-publicip.id
   }
@@ -224,5 +224,4 @@ output "public_ip2" {
   value = azurerm_public_ip.vm2-publicip.ip_address
 
 }
-
 ```
