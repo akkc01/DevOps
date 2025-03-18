@@ -34,7 +34,7 @@ variable "virtual_network_name2" {
 }
 
 
-variable "subnet11" {
+variable "subnet1" {
   description = "The name of the subnet in which the resources will be created"
   type        = string
   default     = "subnet1"
@@ -42,7 +42,7 @@ variable "subnet11" {
 }
 
 
-variable "subnet22" {
+variable "subnet2" {
   description = "The name of the subnet in which the resources will be created"
   type        = string
   default     = "subnet2"
