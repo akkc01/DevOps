@@ -3,7 +3,7 @@ variable "client_secret" {
   description = "The client secret for the service principal"
   type        = string
   sensitive   = false
-  # sensitive = false
+  # sensitive = true
 }
 
 variable "resource_group_name" {
