@@ -46,7 +46,7 @@ CMD ["nginx", "-g", "daemon off;"]
 ### **step- 3 build the image**
 build the image using-
 ```sh
-docker build -t elearn_front:v1
+docker build -t elearn_front:v1 .
 ```
 
 ### **step- 4 create container using the image**
