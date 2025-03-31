@@ -33,7 +33,7 @@ terraform destroy
 
 - **`terraform state`**: Advanced state management commands.
      - **Subcommands**:
-
+```
      - 'terraform state list': Lists resources in the Terraform state.
 
      - 'terraform state show': Shows the details of a resource in the state file.
@@ -43,3 +43,4 @@ terraform destroy
      - 'terraform state pull': Downloads the state file.
 
      - 'terraform state push': Uploads a local state file to a remote backend.
+```
