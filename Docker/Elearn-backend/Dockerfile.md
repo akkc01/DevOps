@@ -1,3 +1,4 @@
+```
 # Use the official .NET SDK image to build the application
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
 WORKDIR /app
@@ -20,8 +21,9 @@ COPY --from=build-env /app/out .
 
 # Set the entry point to run the application
 ENTRYPOINT ["dotnet", "ElearnBackend.dll"]
-
-
+```
+## You can use this also but the image size will be large.
+```
 # # Use the official .NET SDK image to build the application
 # FROM mcr.microsoft.com/dotnet/sdk:8.0
 # WORKDIR /app
@@ -35,3 +37,4 @@ ENTRYPOINT ["dotnet", "ElearnBackend.dll"]
 
 # # Set the entry point to run the application
 # ENTRYPOINT ["dotnet", "ElearnBackend.dll"]
+```
