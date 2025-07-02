@@ -1,4 +1,4 @@
-### Docker commit command-
+ ### Docker commit command-
 - useful to commit a container's file changes or settings into a new image.
 
 ```
